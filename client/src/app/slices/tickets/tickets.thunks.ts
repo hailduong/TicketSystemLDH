@@ -38,11 +38,16 @@ export const fetchTicketById = createAsyncThunk<TTicket, number>(
 );
 
 /** Create a new ticket */
-export const createTicket = createAsyncThunk<TTicket, TCreateTicketPayload>(
+export const createTicket = createAsyncThunk<Partial<TTicket>, TCreateTicketPayload>(
   'tickets/createTicket',
   async (payload, thunkAPI) => {
     try {
-      const ticket = await ticketsService.createTicket(payload);
+      const payloadWithDefaults = {
+        ...payload,
+        completed: false, // Default value for completed
+        assigneeId: payload.assigneeId ?? null,
+      };
+      const ticket = await ticketsService.createTicket(payloadWithDefaults);
       return ticket;
     } catch (error) {
       return thunkAPI.rejectWithValue(
@@ -51,6 +56,7 @@ export const createTicket = createAsyncThunk<TTicket, TCreateTicketPayload>(
     }
   }
 );
+
 
 /** Update an existing ticket */
 export const updateTicket = createAsyncThunk<

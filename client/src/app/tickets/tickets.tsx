@@ -1,11 +1,14 @@
 /* Common */
-import React, { useState, useMemo } from 'react';
-import styled from 'styled-components';
-import {Ticket} from '@acme/shared-models'
+import React, {useState, useMemo} from 'react'
+import styled from 'styled-components'
+
+import type {TTicket} from '../slices/tickets/tickets.types'
+import {createTicket} from '../slices/tickets/tickets.thunks'
+import {useAppDispatch} from 'client/src/app/slices/hooks'
 
 /* Props & Store */
 type TicketsProps = {
-  tickets: Ticket[];
+  tickets: TTicket[];
   loading?: boolean;
   error?: string;
 };
@@ -34,9 +37,15 @@ const TicketsContainer = styled.div`
             color: #fff;
             cursor: pointer;
             font-weight: 600;
+            transition: background-color 0.3s;
 
             &.active {
                 background: #b31166;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
             }
         }
     }
@@ -65,60 +74,101 @@ const TicketsContainer = styled.div`
         font-style: italic;
         margin: 2rem 0;
     }
-`;
+`
 
-export const Tickets: React.FC<TicketsProps> = ({ tickets, loading, error }) => {
+
+/* Render */
+const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
+  const dispatch = useAppDispatch()
+
   // Filter state: all, open, completed
-  const [filter, setFilter] = useState<'all' | 'open' | 'completed'>('all');
+  const [filter, setFilter] = useState<'all' | 'open' | 'completed'>('all')
 
-  // Filter tickets based on `completed` boolean
+  // Add Ticket modal state
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false)
+  const [newDescription, setNewDescription] = useState('')
+  const [isSaving, setIsSaving] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
+
+  // Filter tickets based on completed boolean
   const filteredTickets = useMemo(() => {
-    if (filter === 'all') return tickets;
-    if (filter === 'open') return tickets.filter((t) => !t.completed);
-    return tickets.filter((t) => t.completed);
-  }, [tickets, filter]);
+    if (filter === 'all') return tickets
+    if (filter === 'open') return tickets.filter((t) => !t.completed)
+    return tickets.filter((t) => t.completed)
+  }, [tickets, filter])
+
+  // Form submit handler for adding ticket
+  const handleAddTicketSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!newDescription.trim()) return
+
+    setIsSaving(true)
+    setSaveError(null)
+
+    try {
+      // createTicket expects { description: string } per your thunk file
+      await dispatch(createTicket({description: newDescription})).unwrap()
+      setNewDescription('')
+      setIsAddModalOpen(false)
+    } catch (err: any) {
+      setSaveError(err.message || 'Failed to add ticket')
+    } finally {
+      setIsSaving(false)
+    }
+  }
 
   return (
     <TicketsContainer>
       <h2>Tickets</h2>
 
+      {/* Filter buttons */}
       <div className="filter-row">
         <button
           className={filter === 'all' ? 'active' : ''}
           onClick={() => setFilter('all')}
+          disabled={loading || isSaving}
         >
           All
         </button>
         <button
           className={filter === 'open' ? 'active' : ''}
           onClick={() => setFilter('open')}
+          disabled={loading || isSaving}
         >
           Open
         </button>
         <button
           className={filter === 'completed' ? 'active' : ''}
           onClick={() => setFilter('completed')}
+          disabled={loading || isSaving}
         >
           Completed
         </button>
       </div>
 
-      {/* Add Ticket button stub */}
-      <div style={{ marginBottom: '1.25rem' }}>
-        <button disabled style={{ opacity: 0.5 }}>
-          + Add Ticket (coming soon)
+      {/* Add Ticket button */}
+      <div style={{marginBottom: '1.25rem'}}>
+        <button
+          onClick={() => setIsAddModalOpen(true)}
+          disabled={loading || isSaving}
+        >
+          + Add Ticket
         </button>
       </div>
 
+      {/* Loading & Error */}
       {loading && <div>Loading tickets...</div>}
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {error && <div style={{color: 'red'}}>{error}</div>}
 
+      {/* Ticket List */}
       {filteredTickets.length > 0 ? (
         <ul className="ticket-list">
           {filteredTickets.map((t) => (
             <li key={t.id}>
               <strong>#{t.id}</strong>: {t.description}
-              <span className="status">[{t.completed ? 'Completed' : 'Open'}]</span>
+              <span className="status">
+                [{t.completed ? 'Completed' : 'Open'}]
+              </span>
               {t.assigneeId !== null && (
                 <div>
                   <small>Assignee ID: {t.assigneeId}</small>
@@ -130,8 +180,72 @@ export const Tickets: React.FC<TicketsProps> = ({ tickets, loading, error }) => 
       ) : !loading ? (
         <div className="empty">No tickets found.</div>
       ) : null}
-    </TicketsContainer>
-  );
-};
 
-export default Tickets;
+      {/* Add Ticket Modal */}
+      {isAddModalOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 999
+          }}
+        >
+          <form
+            onSubmit={handleAddTicketSubmit}
+            style={{
+              background: '#fff',
+              padding: '1rem 1.5rem',
+              borderRadius: '12px',
+              minWidth: '320px',
+              boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
+            }}
+          >
+            <h3>Add New Ticket</h3>
+            <div style={{marginBottom: '0.75rem'}}>
+              <label htmlFor="description">Description</label>
+              <input
+                id="description"
+                type="text"
+                value={newDescription}
+                onChange={(e) => setNewDescription(e.target.value)}
+                disabled={isSaving}
+                required
+                style={{width: '100%', padding: '0.5rem', marginTop: '0.25rem'}}
+                autoFocus
+              />
+            </div>
+            {saveError && <p style={{color: 'red'}}>{saveError}</p>}
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                gap: '0.5rem'
+              }}
+            >
+              <button
+                className="btn btn-primary"
+                type="button"
+                onClick={() => setIsAddModalOpen(false)}
+                disabled={isSaving}
+              >
+                Cancel
+              </button>
+              <button type="submit" disabled={isSaving}>
+                {isSaving ? 'Saving...' : 'Add'}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+    </TicketsContainer>
+  )
+}
+
+export default Tickets

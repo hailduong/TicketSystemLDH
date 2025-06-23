@@ -9,7 +9,7 @@ import {
 } from './tickets.thunks';
 
 type TicketsState = {
-  tickets: TTicket[];
+  tickets: Partial<TTicket>[];
   selectedTicket?: TTicket;
   loadingList: boolean;
   loadingDetails: boolean;
@@ -66,7 +66,7 @@ const ticketsSlice = createSlice({
       state.saving = true;
       state.error = null;
     });
-    builder.addCase(createTicket.fulfilled, (state, action: PayloadAction<TTicket>) => {
+    builder.addCase(createTicket.fulfilled, (state, action: PayloadAction<Partial<TTicket>>) => {
       state.saving = false;
       state.tickets.push(action.payload);
     });
