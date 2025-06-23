@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import {fetchTickets} from './slices/tickets/tickets.thunks'
 import Tickets from './tickets/tickets'
 import {useAppDispatch, useAppSelector} from 'client/src/app/slices/hooks'
+import {fetchUsers} from 'client/src/app/slices/users/users.thunks'
+import TicketDetails from 'client/src/app/tickets/TicketDetails'
 
 /* Props & Store */
 // No props for App component
@@ -25,8 +27,6 @@ const AppContainer = styled.div`
     h1 {
         font-size: 2.5rem;
         color: #b31166;
-
-        // Nested styling example
         margin-bottom: 1rem;
     }
 `
@@ -42,6 +42,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     dispatch(fetchTickets())
+    dispatch(fetchUsers())
   }, [dispatch])
 
   /* Render */
@@ -52,7 +53,7 @@ const App: React.FC = () => {
       {error && <p style={{color: 'red'}}>{error}</p>}
       <Routes>
         <Route path="/tickets" element={<Tickets tickets={tickets}/>}/>
-        <Route path="/tickets/:id" element={<h2>Details Not Implemented</h2>}/>
+        <Route path="/tickets/:id" element={<TicketDetails />} />
         <Route path="*" element={<p>Page not found</p>}/>
       </Routes>
     </AppContainer>

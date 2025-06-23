@@ -1,17 +1,18 @@
+// client/src/app/tickets/tickets.tsx
 /* Common */
 import React, {useState, useMemo} from 'react'
 import styled from 'styled-components'
-
+import {useNavigate} from 'react-router-dom' // import useNavigate
 import type {TTicket} from '../slices/tickets/tickets.types'
 import {createTicket} from '../slices/tickets/tickets.thunks'
-import {useAppDispatch} from 'client/src/app/slices/hooks'
+import {useAppDispatch, useAppSelector} from '../slices/hooks'
 
 /* Props & Store */
 type TicketsProps = {
-  tickets: TTicket[];
-  loading?: boolean;
-  error?: string;
-};
+  tickets: Partial<TTicket>[]
+  loading?: boolean
+  error?: string
+}
 
 /* States */
 const TicketsContainer = styled.div`
@@ -60,6 +61,7 @@ const TicketsContainer = styled.div`
             border-radius: 8px;
             background: #fff;
             box-shadow: 0 2px 8px rgba(179, 17, 102, 0.03);
+            cursor: pointer; /* add pointer cursor */
 
             .status {
                 font-size: 0.85rem;
@@ -80,13 +82,20 @@ const TicketsContainer = styled.div`
 /* Render */
 const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
   const dispatch = useAppDispatch()
+  const navigate = useNavigate() // initialize navigate
 
-  // Filter state: all, open, completed
+  // Users slice state
+  const users = useAppSelector((state) => state.users.users)
+  const usersLoading = useAppSelector((state) => state.users.loading)
+  const usersError = useAppSelector((state) => state.users.error)
+
+  // Filter and modal states
   const [filter, setFilter] = useState<'all' | 'open' | 'completed'>('all')
 
   // Add Ticket modal state
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
   const [newDescription, setNewDescription] = useState('')
+  const [newAssigneeId, setNewAssigneeId] = useState<number | null>(null) // new assignee state
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
 
@@ -97,6 +106,11 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     return tickets.filter((t) => t.completed)
   }, [tickets, filter])
 
+  // Navigate to ticket details on click
+  const handleTicketClick = (id: number) => {
+    navigate(`/tickets/${id}`)
+  }
+
   // Form submit handler for adding ticket
   const handleAddTicketSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -106,9 +120,15 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     setSaveError(null)
 
     try {
-      // createTicket expects { description: string } per your thunk file
-      await dispatch(createTicket({description: newDescription})).unwrap()
+      // Include assigneeId in the payload if selected
+      const payload: any = {description: newDescription}
+      if (newAssigneeId !== null) {
+        payload.assigneeId = newAssigneeId
+      }
+
+      await dispatch(createTicket(payload)).unwrap()
       setNewDescription('')
+      setNewAssigneeId(null) // reset assignee selection
       setIsAddModalOpen(false)
     } catch (err: any) {
       setSaveError(err.message || 'Failed to add ticket')
@@ -164,7 +184,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
       {filteredTickets.length > 0 ? (
         <ul className="ticket-list">
           {filteredTickets.map((t) => (
-            <li key={t.id}>
+            <li key={t.id} onClick={() => handleTicketClick(t.id!)}>
               <strong>#{t.id}</strong>: {t.description}
               <span className="status">
                 [{t.completed ? 'Completed' : 'Open'}]
@@ -221,6 +241,34 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
                 autoFocus
               />
             </div>
+
+            {/* Assignee dropdown */}
+            <div style={{marginBottom: '0.75rem'}}>
+              <label htmlFor="assignee">Assignee</label>
+              {usersLoading ? (
+                <p>Loading users...</p>
+              ) : usersError ? (
+                <p style={{color: 'red'}}>{usersError}</p>
+              ) : (
+                <select
+                  id="assignee"
+                  value={newAssigneeId ?? ''}
+                  onChange={(e) =>
+                    setNewAssigneeId(e.target.value ? Number(e.target.value) : null)
+                  }
+                  disabled={isSaving}
+                  style={{width: '100%', padding: '0.5rem', marginTop: '0.25rem'}}
+                >
+                  <option value="">-- Select Assignee (optional) --</option>
+                  {users.map((user) => (
+                    <option key={user.id} value={user.id}>
+                      {user.name}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
+
             {saveError && <p style={{color: 'red'}}>{saveError}</p>}
             <div
               style={{
