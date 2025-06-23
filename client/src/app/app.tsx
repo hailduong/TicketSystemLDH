@@ -1,41 +1,62 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Ticket, User } from '@acme/shared-models';
+/* Common */
+import React, {useEffect} from 'react'
+import {Routes, Route} from 'react-router-dom'
+import styled from 'styled-components'
+import {fetchTickets} from './slices/tickets/tickets.thunks'
+import Tickets from './tickets/tickets'
+import {useAppDispatch, useAppSelector} from 'client/src/app/slices/hooks'
 
-import styles from './app.module.css';
-import Tickets from './tickets/tickets';
+/* Props & Store */
+// No props for App component
 
-const App = () => {
-  const [tickets, setTickets] = useState([] as Ticket[]);
-  const [users, setUsers] = useState([] as User[]);
+/* States */
+// None locally
 
-  // Very basic way to synchronize state with server.
-  // Feel free to use any state/fetch library you want (e.g. react-query, xstate, redux, etc.).
+/* Handlers */
+// None locally
+
+/* Hooks */
+const AppContainer = styled.div`
+    padding: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+
+    h1 {
+        font-size: 2.5rem;
+        color: #b31166;
+
+        // Nested styling example
+        margin-bottom: 1rem;
+    }
+`
+
+/* Effects */
+const App: React.FC = () => {
+  const dispatch = useAppDispatch()
+
+  // Select tickets and loading/error flags from Redux store
+  const tickets = useAppSelector((state) => state.tickets.tickets)
+  const loading = useAppSelector((state) => state.tickets.loadingList)
+  const error = useAppSelector((state) => state.tickets.error)
+
   useEffect(() => {
-    async function fetchTickets() {
-      const data = await fetch('/api/tickets').then();
-      setTickets(await data.json());
-    }
+    dispatch(fetchTickets())
+  }, [dispatch])
 
-    async function fetchUsers() {
-      const data = await fetch('/api/users').then();
-      setUsers(await data.json());
-    }
-
-    fetchTickets();
-    fetchUsers();
-  }, []);
-
+  /* Render */
   return (
-    <div className={styles['app']}>
+    <AppContainer>
       <h1>Ticketing App</h1>
+      {loading && <p>Loading tickets...</p>}
+      {error && <p style={{color: 'red'}}>{error}</p>}
       <Routes>
-        <Route path="/" element={<Tickets tickets={tickets} />} />
-        {/* Hint: Try `npx nx g component TicketDetails --project=client --no-export` to generate this component  */}
-        <Route path="/:id" element={<h2>Details Not Implemented</h2>} />
+        <Route path="/tickets" element={<Tickets tickets={tickets}/>}/>
+        <Route path="/tickets/:id" element={<h2>Details Not Implemented</h2>}/>
+        <Route path="*" element={<p>Page not found</p>}/>
       </Routes>
-    </div>
-  );
-};
+    </AppContainer>
+  )
+}
 
-export default App;
+export default App
