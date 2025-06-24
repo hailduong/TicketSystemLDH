@@ -1,0 +1,378 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.1",
+  "pathMappings": {
+    "@acme/shared-models": [
+      "shared-models/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "server": [
+        {
+          "file": "server/.eslintrc.json",
+          "hash": "2095286952134203255"
+        },
+        {
+          "file": "server/README.md",
+          "hash": "2004448523321094873"
+        },
+        {
+          "file": "server/jest.config.ts",
+          "hash": "10782735800750836682"
+        },
+        {
+          "file": "server/project.json",
+          "hash": "117977951567872970"
+        },
+        {
+          "file": "server/src/app/app.module.ts",
+          "hash": "12343336929695710565"
+        },
+        {
+          "file": "server/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "server/src/main.ts",
+          "hash": "2723209554388042942"
+        },
+        {
+          "file": "server/src/tickets/tickets.controller.spec.ts",
+          "hash": "4142267474090349934"
+        },
+        {
+          "file": "server/src/tickets/tickets.controller.ts",
+          "hash": "2702375542018615729"
+        },
+        {
+          "file": "server/src/tickets/tickets.module.ts",
+          "hash": "9968096226248738382"
+        },
+        {
+          "file": "server/src/tickets/tickets.service.spec.ts",
+          "hash": "16511226213540507061"
+        },
+        {
+          "file": "server/src/tickets/tickets.service.ts",
+          "hash": "10573140157492115237"
+        },
+        {
+          "file": "server/src/users/users.controller.spec.ts",
+          "hash": "16342682103395823183"
+        },
+        {
+          "file": "server/src/users/users.controller.ts",
+          "hash": "8931187584594615930"
+        },
+        {
+          "file": "server/src/users/users.module.ts",
+          "hash": "9153994285988814599"
+        },
+        {
+          "file": "server/src/users/users.service.spec.ts",
+          "hash": "7278099433523887940"
+        },
+        {
+          "file": "server/src/users/users.service.ts",
+          "hash": "9253386373304752105"
+        },
+        {
+          "file": "server/src/utils/random-delay.ts",
+          "hash": "5468426687559655769"
+        },
+        {
+          "file": "server/tsconfig.app.json",
+          "hash": "15582380693101187294"
+        },
+        {
+          "file": "server/tsconfig.json",
+          "hash": "6803799812066263642"
+        },
+        {
+          "file": "server/tsconfig.spec.json",
+          "hash": "3552237631424410558"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "shared-models/.eslintrc.json",
+          "hash": "2210066167144675689"
+        },
+        {
+          "file": "shared-models/README.md",
+          "hash": "15204363035967669430"
+        },
+        {
+          "file": "shared-models/jest.config.ts",
+          "hash": "14736084013485287909"
+        },
+        {
+          "file": "shared-models/project.json",
+          "hash": "2444105199955805148"
+        },
+        {
+          "file": "shared-models/src/index.ts",
+          "hash": "5960793450173596579"
+        },
+        {
+          "file": "shared-models/tsconfig.json",
+          "hash": "18330180151193889737"
+        },
+        {
+          "file": "shared-models/tsconfig.lib.json",
+          "hash": "9307280892995242626"
+        },
+        {
+          "file": "shared-models/tsconfig.spec.json",
+          "hash": "15659688836178903222"
+        }
+      ],
+      "client": [
+        {
+          "file": "client/.eslintrc.json",
+          "hash": "6915203229552260501"
+        },
+        {
+          "file": "client/README.md",
+          "hash": "14348731288152984215"
+        },
+        {
+          "file": "client/jest.config.ts",
+          "hash": "12301833143309631309"
+        },
+        {
+          "file": "client/project.json",
+          "hash": "15075938686557292619"
+        },
+        {
+          "file": "client/proxy.conf.json",
+          "hash": "7740023976500524898"
+        },
+        {
+          "file": "client/src/app/app.tsx",
+          "hash": "4689449342828906142"
+        },
+        {
+          "file": "client/src/app/slices/hooks.ts",
+          "hash": "7752920371332566496"
+        },
+        {
+          "file": "client/src/app/slices/httpService.ts",
+          "hash": "8498758514025439337"
+        },
+        {
+          "file": "client/src/app/slices/store.ts",
+          "hash": "3669048382323524660"
+        },
+        {
+          "file": "client/src/app/slices/tickets/tickets.service.ts",
+          "hash": "11067567090597865742"
+        },
+        {
+          "file": "client/src/app/slices/tickets/tickets.slice.ts",
+          "hash": "10124878350314172365"
+        },
+        {
+          "file": "client/src/app/slices/tickets/tickets.thunks.ts",
+          "hash": "16342901715698692956"
+        },
+        {
+          "file": "client/src/app/slices/tickets/tickets.types.ts",
+          "hash": "4781704595442756822"
+        },
+        {
+          "file": "client/src/app/slices/users/users.service.ts",
+          "hash": "10275530811994612506"
+        },
+        {
+          "file": "client/src/app/slices/users/users.slice.ts",
+          "hash": "7542797427241792194"
+        },
+        {
+          "file": "client/src/app/slices/users/users.thunks.ts",
+          "hash": "12876159344948969575"
+        },
+        {
+          "file": "client/src/app/slices/users/users.types.ts",
+          "hash": "14794863555354198206"
+        },
+        {
+          "file": "client/src/app/tickets/AddTicketModal.test.tsx",
+          "hash": "18190530592613407129"
+        },
+        {
+          "file": "client/src/app/tickets/AddTicketModal.tsx",
+          "hash": "2256767216395686286"
+        },
+        {
+          "file": "client/src/app/tickets/TicketDetails.tsx",
+          "hash": "16376765141503322241"
+        },
+        {
+          "file": "client/src/app/tickets/index.tsx",
+          "hash": "15638278340068621669"
+        },
+        {
+          "file": "client/src/app/tickets/tickets.spec.tsx",
+          "hash": "5767795378918975651"
+        },
+        {
+          "file": "client/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "client/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "client/src/index.html",
+          "hash": "11627208672861740591"
+        },
+        {
+          "file": "client/src/main.tsx",
+          "hash": "9570736081092191971"
+        },
+        {
+          "file": "client/src/styles.css",
+          "hash": "2786588710532161361"
+        },
+        {
+          "file": "client/src/styles.ts",
+          "hash": "1869490968770505635"
+        },
+        {
+          "file": "client/test-setup.ts",
+          "hash": "16903885983588411080"
+        },
+        {
+          "file": "client/tsconfig.app.json",
+          "hash": "12833646843349042727"
+        },
+        {
+          "file": "client/tsconfig.json",
+          "hash": "11247433899939285370"
+        },
+        {
+          "file": "client/tsconfig.spec.json",
+          "hash": "10592128716951770072"
+        },
+        {
+          "file": "client/webpack.config.js",
+          "hash": "4092191173296970715"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "6395587983290009865"
+      },
+      {
+        "file": ".idea/.gitignore",
+        "hash": "5109518935359090045"
+      },
+      {
+        "file": ".idea/codeStyles/codeStyleConfig.xml",
+        "hash": "3155737672407993363"
+      },
+      {
+        "file": ".idea/coding-assignment-react.iml",
+        "hash": "7210100432694438571"
+      },
+      {
+        "file": ".idea/inspectionProfiles/Project_Default.xml",
+        "hash": "8912173605315939135"
+      },
+      {
+        "file": ".idea/misc.xml",
+        "hash": "9586562408024537364"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "4612147335852273964"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "14600148892634157659"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/37aa752d8ab08c005370ac3cb572af363c81a7388bbd7333e585720a61efebf2",
+        "hash": "3149751444666419287"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/427ede64f14cf637f7cfad8729bbc2640ac86774dc93c3b3ee2f2c3c4067a580",
+        "hash": "5585377081862553966"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/46e6219514979a3c78e1fed5705b0c7a833fbabc69ab6d14acdb0e8043254f92",
+        "hash": "1809013922315005712"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/7be94d9701ce209d1a14ca51deace591681578a8ad510f7c87a8ebadcd0fce42",
+        "hash": "10188364024351267386"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/878fac939f57b2f034f981b7746f8c518fe008da4fa00c5f49e748b684f221f6",
+        "hash": "2227831569643892822"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/a7a287d09c8a68f2864e7dc03270122b91156076f2b8182a58edaa58c41ed1c4",
+        "hash": "16494858627656113711"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/ac696664ea9df7967af4d9f99f0c0d10a31d1ff06e44ba88fdb76e03163d0d42",
+        "hash": "9595236418531287183"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/cb91149a9fad2d319a38c25f108233c8968dd34594015fbb45f27474a8d6d022",
+        "hash": "1034186702353005728"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/da32437887161cb52cb2e868747b55e696b1cf9f8f675921d96d4c3a31209c07",
+        "hash": "7910223943203134011"
+      },
+      {
+        "file": ".nxcache/terminalOutputs/ead9dc6c0188870ccb307bb57f579a1db95f453273f6d16e484c47e0b8ad8ba2",
+        "hash": "9518351562897568437"
+      },
+      {
+        "file": "Procfile",
+        "hash": "1441070225211639117"
+      },
+      {
+        "file": "README.md",
+        "hash": "3385365319310189074"
+      },
+      {
+        "file": "babel.config.json",
+        "hash": "13918569489643201829"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "6428874548048698599"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "6601938978209669085"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12193031070582646976"
+      },
+      {
+        "file": "package.json",
+        "hash": "8688909790576108415"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "7208709417852988591"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "5906501889440671406"
+      }
+    ]
+  }
+}
