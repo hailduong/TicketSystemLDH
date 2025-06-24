@@ -1,10 +1,6 @@
 import type {AxiosResponse} from 'axios'
-import httpService from '../httpService'
+import httpService, {API_ENDPOINTS} from '../httpService'
 import type {TUsersResponse} from './users.types'
-
-const API_ENDPOINTS = {
-  USERS: '/users'
-} as const
 
 interface IUserService {
   fetchUsers(): Promise<TUsersResponse>;
