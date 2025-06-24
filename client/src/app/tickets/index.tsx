@@ -1,20 +1,21 @@
-// client/src/app/tickets/tickets.tsx
 /* Common */
 import React, {useState, useMemo} from 'react'
 import styled from 'styled-components'
-import {useNavigate} from 'react-router-dom' // import useNavigate
+import {useNavigate} from 'react-router-dom'
 import type {TTicket} from '../slices/tickets/tickets.types'
 import {createTicketThunk} from '../slices/tickets/tickets.thunks'
 import {useAppDispatch, useAppSelector} from '../slices/hooks'
 
 /* Props & Store */
-type TicketsProps = {
+type FilterType = 'all' | 'open' | 'completed'
+
+interface TicketsProps {
   tickets: Partial<TTicket>[]
   loading?: boolean
   error?: string
 }
 
-/* States */
+/* Styles */
 const TicketsContainer = styled.div`
     padding: 1.25rem;
     background: #fafafa;
@@ -61,7 +62,7 @@ const TicketsContainer = styled.div`
             border-radius: 8px;
             background: #fff;
             box-shadow: 0 2px 8px rgba(179, 17, 102, 0.03);
-            cursor: pointer; /* add pointer cursor */
+            cursor: pointer;
 
             .status {
                 font-size: 0.85rem;
@@ -78,51 +79,73 @@ const TicketsContainer = styled.div`
     }
 `
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+`
+
+const ModalForm = styled.form`
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  min-width: 320px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+`
+
+/* Hooks */
+const useTicketHandlers = () => {
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+
+  const handleTicketClick = (id: number) => {
+    navigate(`/tickets/${id}`)
+  }
+
+  const handleAddTicket = async (description: string) => {
+    if (!description.trim()) return
+    const payload = { description }
+    return await dispatch(createTicketThunk(payload)).unwrap()
+  }
+
+  return {handleTicketClick, handleAddTicket}
+}
 
 /* Render */
 const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate() // initialize navigate
-
-  // Users slice state
+  /* Store */
   const users = useAppSelector((state) => state.users.users)
-  const usersLoading = useAppSelector((state) => state.users.loading)
-  const usersError = useAppSelector((state) => state.users.error)
 
-  // Filter and modal states
-  const [filter, setFilter] = useState<'all' | 'open' | 'completed'>('all')
-
-  // Add Ticket modal state
+  /* States */
+  const [filter, setFilter] = useState<FilterType>('all')
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
   const [newDescription, setNewDescription] = useState('')
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
 
-  // Filter tickets based on completed boolean
+  /* Handlers */
+  const {handleTicketClick, handleAddTicket} = useTicketHandlers()
+
+  /* Memos */
   const filteredTickets = useMemo(() => {
     if (filter === 'all') return tickets
-    if (filter === 'open') return tickets.filter((t) => !t.completed)
-    return tickets.filter((t) => t.completed)
+    return tickets.filter((t) => filter === 'open' ? !t.completed : t.completed)
   }, [tickets, filter])
 
-  // Navigate to ticket details on click
-  const handleTicketClick = (id: number) => {
-    navigate(`/tickets/${id}`)
-  }
-
-  // Form submit handler for adding ticket
   const handleAddTicketSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!newDescription.trim()) return
-
     setIsSaving(true)
     setSaveError(null)
 
     try {
-      const payload = {
-        description: newDescription
-      }
-      await dispatch(createTicketThunk(payload)).unwrap()
+      await handleAddTicket(newDescription)
       setNewDescription('')
       setIsAddModalOpen(false)
     } catch (err: any) {
@@ -136,32 +159,19 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     <TicketsContainer>
       <h2>Tickets</h2>
 
-      {/* Filter buttons */}
       <div className="filter-row">
-        <button
-          className={filter === 'all' ? 'active' : ''}
-          onClick={() => setFilter('all')}
-          disabled={loading || isSaving}
-        >
-          All
-        </button>
-        <button
-          className={filter === 'open' ? 'active' : ''}
-          onClick={() => setFilter('open')}
-          disabled={loading || isSaving}
-        >
-          Open
-        </button>
-        <button
-          className={filter === 'completed' ? 'active' : ''}
-          onClick={() => setFilter('completed')}
-          disabled={loading || isSaving}
-        >
-          Completed
-        </button>
+        {['all', 'open', 'completed'].map((f) => (
+          <button
+            key={f}
+            className={filter === f ? 'active' : ''}
+            onClick={() => setFilter(f as FilterType)}
+            disabled={loading || isSaving}
+          >
+            {f.charAt(0).toUpperCase() + f.slice(1)}
+          </button>
+        ))}
       </div>
 
-      {/* Add Ticket button */}
       <div style={{marginBottom: '1.25rem'}}>
         <button
           onClick={() => setIsAddModalOpen(true)}
@@ -171,15 +181,12 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
         </button>
       </div>
 
-      {/* Loading & Error */}
       {loading && <div>Loading tickets...</div>}
       {error && <div style={{color: 'red'}}>{error}</div>}
 
-      {/* Ticket List */}
       {filteredTickets.length > 0 ? (
         <ul className="ticket-list">
           {filteredTickets.map((t) => {
-            // Find assigned user if there's an assigneeId
             const assignedUser = t.assigneeId
               ? users.find(u => u.id === t.assigneeId)
               : null
@@ -188,7 +195,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
               <li key={t.id} onClick={() => handleTicketClick(t.id!)}>
                 <strong>#{t.id}</strong>: {t.description}
                 <span className="status">
-                [{t.completed ? 'Completed' : 'Open'}]
+                  [{t.completed ? 'Completed' : 'Open'}]
                 </span>
                 {assignedUser && (
                   <div>
@@ -203,32 +210,9 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
         <div className="empty">No tickets found.</div>
       ) : null}
 
-      {/* Add Ticket Modal */}
       {isAddModalOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0,0,0,0.3)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 999
-          }}
-        >
-          <form
-            onSubmit={handleAddTicketSubmit}
-            style={{
-              background: '#fff',
-              padding: '1rem 1.5rem',
-              borderRadius: '12px',
-              minWidth: '320px',
-              boxShadow: '0 2px 10px rgba(0,0,0,0.2)'
-            }}
-          >
+        <ModalOverlay>
+          <ModalForm onSubmit={handleAddTicketSubmit}>
             <h3>Add New Ticket</h3>
             <div style={{marginBottom: '0.75rem'}}>
               <label htmlFor="description">Description</label>
@@ -252,7 +236,6 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
               }}
             >
               <button
-                className="btn btn-primary"
                 type="button"
                 onClick={() => setIsAddModalOpen(false)}
                 disabled={isSaving}
@@ -263,8 +246,8 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
                 {isSaving ? 'Saving...' : 'Add'}
               </button>
             </div>
-          </form>
-        </div>
+          </ModalForm>
+        </ModalOverlay>
       )}
     </TicketsContainer>
   )
