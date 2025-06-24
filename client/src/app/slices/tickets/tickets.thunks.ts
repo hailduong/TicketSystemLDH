@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
-import * as ticketsService from './tickets.service'
+import ticketsService from './tickets.service'
 import type {TTicket, TCreateTicketPayload} from './tickets.types'
 import {RootState} from '../store'
 

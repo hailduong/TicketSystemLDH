@@ -66,6 +66,9 @@ const TicketsContainer = styled.div`
       transition: box-shadow 0.2s ease;
       cursor: pointer;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      position: relative;
+      border-left: 5px solid var(--bs-primary);
+      padding: 1rem 1.5rem 1rem 1rem;
 
       &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -73,10 +76,18 @@ const TicketsContainer = styled.div`
 
       .ticket-id {
         font-weight: 600;
+        background: var(--bs-primary);
+        color: white;
+        padding: 3px 5px;
+        position: absolute;
+        top: -5px;
+        right: -9px;
+        border-radius: 8px;
       }
 
       .ticket-status {
-        margin-left: 0.5rem;
+        margin-left: 0.3rem;
+        font-size: 0.7rem;
       }
 
       .ticket-assignee {
@@ -151,12 +162,13 @@ const TicketItem = React.memo(({ticket, user, onClick}: ITicketItemProps) => (
     data-testid={TEST_IDS.ticketItem}
     onClick={onClick}
     onKeyPress={(e) => e.key === 'Enter' && onClick()}
-    className="ticket-item mb-3 p-3 bg-white rounded"
+    className="ticket-item mb-3 bg-white rounded"
     tabIndex={0}
     role="button"
     aria-label={`Ticket ${ticket.id}: ${ticket.description}`}
   >
-    <span className="ticket-id">#{ticket.id}</span>: {ticket.description}
+    <span className="ticket-id">#{ticket.id}</span>
+    <span>{ticket.description}</span>
     <span
       className={`ticket-status badge rounded-pill ${
         ticket.completed ? 'bg-success' : 'bg-warning'
