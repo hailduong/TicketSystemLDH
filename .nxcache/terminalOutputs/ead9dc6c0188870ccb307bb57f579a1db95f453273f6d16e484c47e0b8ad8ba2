@@ -1,0 +1,47 @@
+<i> [1m[32m[webpack-dev-server] [HPM] Proxy created: /api  -> http://localhost:3333[39m[22m
+<i> [1m[32m[webpack-dev-server] Project is running at:[39m[22m
+<i> [1m[32m[webpack-dev-server] Loopback: [36mhttp://localhost:4200/[39m, [36mhttp://[::1]:4200/[39m[39m[22m
+<i> [1m[32m[webpack-dev-server] 404s will fallback to '[36m/index.html[39m'[39m[22m
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mWeb Development Server is listening at http://localhost:4200/[22m
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.01 MiB (4.02 MiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32mvendor.css[39m[22m 224 KiB [1m[32mvendor.js[39m[22m 2.71 MiB [1m[32mmain.css[39m[22m 103 bytes [1m[32mmain.js[39m[22m 40 KiB 5 auxiliary assets
+Entrypoint [1mstyles[39m[22m 225 KiB (284 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB 3 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m (main) 36.8 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.64 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (a72adac53feeec65)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 2.83 MiB (3.29 MiB) = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32m1.a72adac53feeec65.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.a72adac53feeec65.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32m0.a72adac53feeec65.hot-update.js[39m[22m (main) 36.8 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.a72adac53feeec65.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.a72adac53feeec65.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.64 MiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (e53c50763feb4f2d)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.05 MiB (4.05 MiB) = 8 assets 8 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32m1.e53c50763feb4f2d.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.e53c50763feb4f2d.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32m0.e53c50763feb4f2d.hot-update.js[39m[22m (main) 36.8 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.e53c50763feb4f2d.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.e53c50763feb4f2d.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.e53c50763feb4f2d.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.64 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (65533b0604f91d80)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.01 MiB (4.02 MiB) = 8 assets 8 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32m1.65533b0604f91d80.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.65533b0604f91d80.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32m0.65533b0604f91d80.hot-update.js[39m[22m (main) 36.8 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.65533b0604f91d80.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.65533b0604f91d80.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.65533b0604f91d80.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.64 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (97b53e123b6ca6be)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.01 MiB (4.02 MiB) = 8 assets 8 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.6 KiB [1m[32m1.97b53e123b6ca6be.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.97b53e123b6ca6be.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.css[39m[22m, [1m[32mmain.js[39m[22m, [1m[32m0.97b53e123b6ca6be.hot-update.js[39m[22m (main) 36.8 KiB (javascript) 65 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.97b53e123b6ca6be.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.97b53e123b6ca6be.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.97b53e123b6ca6be.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.64 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (59ffc84e8f491ce3)
+<i> [1m[32m[webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...[39m[22m
+<i> [1m[32m[webpack-dev-server] [HPM] server close signal received: closing proxy server[39m[22m

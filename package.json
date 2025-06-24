@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nx run-many --target=serve --projects=server,client",
-    "test": "nx run-many --target=test --projects=server,client"
+    "test": "nx run-many --target=test --projects=server,client",
+    "heroku-start": "node dist/apps/server/main.js",
+    "heroku-postbuild": "nx build server"
   },
   "dependencies": {
     "@nestjs/common": "9.2.1",

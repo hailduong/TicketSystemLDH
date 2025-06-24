@@ -1,0 +1,1205 @@
+<i> [1m[32m[webpack-dev-server] [HPM] Proxy created: /api  -> http://localhost:3333[39m[22m
+<i> [1m[32m[webpack-dev-server] Project is running at:[39m[22m
+<i> [1m[32m[webpack-dev-server] Loopback: [36mhttp://localhost:4200/[39m, [36mhttp://[::1]:4200/[39m[39m[22m
+<i> [1m[32m[webpack-dev-server] 404s will fallback to '[36m/index.html[39m'[39m[22m
+
+[36m>[39m [7m[1m[36m NX [39m[22m[27m [1mWeb Development Server is listening at http://localhost:4200/[22m
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.13 MiB (4.25 MiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32mvendor.css[39m[22m 224 KiB [1m[32mvendor.js[39m[22m 2.79 MiB [1m[32mmain.js[39m[22m 74.5 KiB 4 auxiliary assets
+Entrypoint [1mstyles[39m[22m 225 KiB (284 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB 3 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m (main) 70.9 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (5fd93d2fa40abbb8)
+(node:4081) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.57 MiB (5.03 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.5fd93d2fa40abbb8.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.5fd93d2fa40abbb8.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.5fd93d2fa40abbb8.hot-update.js[39m[22m (main) 71.3 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.5fd93d2fa40abbb8.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.5fd93d2fa40abbb8.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.5fd93d2fa40abbb8.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.88 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (5470c2de80b1e057)
+<i> [1m[32m[webpack-dev-middleware] wait until bundle finished: /[39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.39 MiB (4.66 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.5470c2de80b1e057.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.5470c2de80b1e057.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.5470c2de80b1e057.hot-update.js[39m[22m (main) 71 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.5470c2de80b1e057.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.5470c2de80b1e057.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.5470c2de80b1e057.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.88 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (5a9aeaf21e95386e)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.39 MiB (4.66 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.5a9aeaf21e95386e.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.5a9aeaf21e95386e.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.5a9aeaf21e95386e.hot-update.js[39m[22m (main) 71.3 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.5a9aeaf21e95386e.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.5a9aeaf21e95386e.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.5a9aeaf21e95386e.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.88 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (7aadf2af5fedf9d7)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.2 MiB (4.3 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.7aadf2af5fedf9d7.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.7aadf2af5fedf9d7.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.7aadf2af5fedf9d7.hot-update.js[39m[22m (main) 71.3 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.7aadf2af5fedf9d7.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.7aadf2af5fedf9d7.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.7aadf2af5fedf9d7.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (2895e945f822be00)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.2 MiB (4.3 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.2895e945f822be00.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.2895e945f822be00.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.2895e945f822be00.hot-update.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.2895e945f822be00.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.2895e945f822be00.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.2895e945f822be00.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (97daa8d032f04ee6)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.97daa8d032f04ee6.hot-update.js[39m[22m (main) 52.1 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.97daa8d032f04ee6.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx[39m[22m [1m[32m22:0-40[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './tickets/tickets' in '/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m6:21[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './tickets/tickets' or its corresponding type declarations.
+  [0m [90m 4 |[39m [36mimport[39m styled [36mfrom[39m [32m'styled-components'[39m[0m
+  [0m [90m 5 |[39m [36mimport[39m {fetchTickets} [36mfrom[39m [32m'./slices/tickets/tickets.thunks'[39m[0m
+  [0m[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m [33mTickets[39m [36mfrom[39m [32m'./tickets/tickets'[39m[0m
+  [0m [90m   |[39m                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 7 |[39m [36mimport[39m {useAppDispatch[33m,[39m useAppSelector} [36mfrom[39m [32m'client/src/app/slices/hooks'[39m[0m
+  [0m [90m 8 |[39m [36mimport[39m {fetchUsers} [36mfrom[39m [32m'client/src/app/slices/users/users.thunks'[39m[0m
+  [0m [90m 9 |[39m [36mimport[39m [33mTicketDetails[39m [36mfrom[39m [32m'client/src/app/tickets/TicketDetails'[39m[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (267b8c166b9790e6)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.97daa8d032f04ee6.hot-update.js[39m[22m (main) 52.1 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.97daa8d032f04ee6.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx[39m[22m [1m[32m22:0-40[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './tickets/tickets' in '/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m6:21[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module './tickets/tickets' or its corresponding type declarations.
+  [0m [90m 4 |[39m [36mimport[39m styled [36mfrom[39m [32m'styled-components'[39m[0m
+  [0m [90m 5 |[39m [36mimport[39m {fetchTickets} [36mfrom[39m [32m'./slices/tickets/tickets.thunks'[39m[0m
+  [0m[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m [33mTickets[39m [36mfrom[39m [32m'./tickets/tickets'[39m[0m
+  [0m [90m   |[39m                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 7 |[39m [36mimport[39m {useAppDispatch[33m,[39m useAppSelector} [36mfrom[39m [32m'client/src/app/slices/hooks'[39m[0m
+  [0m [90m 8 |[39m [36mimport[39m {fetchUsers} [36mfrom[39m [32m'client/src/app/slices/users/users.thunks'[39m[0m
+  [0m [90m 9 |[39m [36mimport[39m [33mTicketDetails[39m [36mfrom[39m [32m'client/src/app/tickets/TicketDetails'[39m[0m
+
+webpack compiled with [1m[31m2 errors[39m[22m (8e910dec65c16bfa)
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 3.2 MiB (4.3 MiB) = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m 226 KiB (285 KiB) = [1m[32mruntime.js[39m[22m 47.7 KiB [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m 351 bytes [1m[32mstyles.css[39m[22m 119 bytes [1m[32mstyles.js[39m[22m 177 KiB [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m 524 bytes 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.97daa8d032f04ee6.hot-update.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.97daa8d032f04ee6.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.97daa8d032f04ee6.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.97daa8d032f04ee6.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (0c477b0042319872)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.0c477b0042319872.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.0c477b0042319872.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.0c477b0042319872.hot-update.js[39m[22m (main) 66.5 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.0c477b0042319872.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.0c477b0042319872.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.0c477b0042319872.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts[39m[22m
+Module build failed (from ./node_modules/swc-loader/src/index.js):
+Error: 
+  [38;2;255;30;30m×[0m Expected '>', got 'name'
+   ╭─[[38;2;92;157;255;1;4m/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice.ts[0m:1:1]
+ [2m1[0m │ <file name=tickets.tsx path=client/src/app/tickets/tickets.tsx>
+   · [38;2;246;87;248m      ────[0m
+   ╰────
+
+
+Caused by:
+    0: failed to process input file
+    1: Syntax Error
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/store.ts:[32m[1m3:8[22m[39m[1m[39m[22m
+[90mTS1192: [39mModule '"/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice"' has no default export.
+  [0m [90m 1 |[39m [36mimport[39m { configureStore } [36mfrom[39m [32m'@reduxjs/toolkit'[39m[33m;[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m usersReducer [36mfrom[39m [32m'./users/users.slice'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m ticketsReducer [36mfrom[39m [32m'./tickets/tickets.slice'[39m[33m;[39m[0m
+  [0m [90m   |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 4 |[39m[0m
+  [0m [90m 5 |[39m [36mexport[39m [36mconst[39m store [33m=[39m configureStore({[0m
+  [0m [90m 6 |[39m   reducer[33m:[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:2[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'file'. Did you mean 'File'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:12[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:24[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'path'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:29[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'client'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:36[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'src'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:40[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'app'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:44[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:52[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m13:8[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '../slices/tickets/tickets.thunks' or its corresponding type declarations.
+  [0m [90m 11 |[39m   markComplete[33m,[39m[0m
+  [0m [90m 12 |[39m   markIncomplete[0m
+  [0m[31m[1m>[22m[39m[90m 13 |[39m } [36mfrom[39m [32m'../slices/tickets/tickets.thunks'[39m[0m
+  [0m [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 14 |[39m[0m
+  [0m [90m 15 |[39m [36mexport[39m [36mfunction[39m [33mTickets[39m() {[0m
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m17:53[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 15 |[39m [36mexport[39m [36mfunction[39m [33mTickets[39m() {[0m
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+  [0m[31m[1m>[22m[39m[90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m18:57[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+  [0m [90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 21 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m19:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 21 |[39m[0m
+  [0m [90m 22 |[39m   [36mconst[39m [newDescription[33m,[39m setNewDescription] [33m=[39m useState([32m''[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m20:51[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 21 |[39m[0m
+  [0m [90m 22 |[39m   [36mconst[39m [newDescription[33m,[39m setNewDescription] [33m=[39m useState([32m''[39m)[0m
+  [0m [90m 23 |[39m   [36mconst[39m [newAssigneeId[33m,[39m setNewAssigneeId] [33m=[39m useState[33m<[39m[33mnumber[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m24 errors[39m[22m (7ffb91c15ba922f6)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.0c477b0042319872.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.0c477b0042319872.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.0c477b0042319872.hot-update.js[39m[22m (main) 66.5 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.0c477b0042319872.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.0c477b0042319872.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.0c477b0042319872.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts[39m[22m
+Module build failed (from ./node_modules/swc-loader/src/index.js):
+Error: 
+  [38;2;255;30;30m×[0m Expected '>', got 'name'
+   ╭─[[38;2;92;157;255;1;4m/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice.ts[0m:1:1]
+ [2m1[0m │ <file name=tickets.tsx path=client/src/app/tickets/tickets.tsx>
+   · [38;2;246;87;248m      ────[0m
+   ╰────
+
+
+Caused by:
+    0: failed to process input file
+    1: Syntax Error
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/store.ts:[32m[1m3:8[22m[39m[1m[39m[22m
+[90mTS1192: [39mModule '"/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice"' has no default export.
+  [0m [90m 1 |[39m [36mimport[39m { configureStore } [36mfrom[39m [32m'@reduxjs/toolkit'[39m[33m;[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m usersReducer [36mfrom[39m [32m'./users/users.slice'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m ticketsReducer [36mfrom[39m [32m'./tickets/tickets.slice'[39m[33m;[39m[0m
+  [0m [90m   |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 4 |[39m[0m
+  [0m [90m 5 |[39m [36mexport[39m [36mconst[39m store [33m=[39m configureStore({[0m
+  [0m [90m 6 |[39m   reducer[33m:[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:2[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'file'. Did you mean 'File'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:12[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:24[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'path'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:29[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'client'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:36[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'src'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:40[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'app'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:44[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:52[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [33m<[39m[33mfile[39m name[33m=[39mtickets[33m.[39mtsx path[33m=[39mclient[33m/[39msrc[33m/[39mapp[33m/[39mtickets[33m/[39mtickets[33m.[39mtsx[33m>[39m[0m
+  [0m [90m   |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [90m// client/src/app/tickets/tickets.tsx[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m [33mReact[39m[33m,[39m {useState} [36mfrom[39m [32m'react'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {useDispatch[33m,[39m useSelector} [36mfrom[39m [32m'react-redux'[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m13:8[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '../slices/tickets/tickets.thunks' or its corresponding type declarations.
+  [0m [90m 11 |[39m   markComplete[33m,[39m[0m
+  [0m [90m 12 |[39m   markIncomplete[0m
+  [0m[31m[1m>[22m[39m[90m 13 |[39m } [36mfrom[39m [32m'../slices/tickets/tickets.thunks'[39m[0m
+  [0m [90m    |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 14 |[39m[0m
+  [0m [90m 15 |[39m [36mexport[39m [36mfunction[39m [33mTickets[39m() {[0m
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m17:53[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 15 |[39m [36mexport[39m [36mfunction[39m [33mTickets[39m() {[0m
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+  [0m[31m[1m>[22m[39m[90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m18:57[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 16 |[39m   [36mconst[39m dispatch [33m=[39m useDispatch()[0m
+  [0m [90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 21 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m19:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 17 |[39m   [36mconst[39m tickets [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 21 |[39m[0m
+  [0m [90m 22 |[39m   [36mconst[39m [newDescription[33m,[39m setNewDescription] [33m=[39m useState([32m''[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m20:51[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 18 |[39m   [36mconst[39m loadingList [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 19 |[39m   [36mconst[39m saving [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 20 |[39m   [36mconst[39m error [33m=[39m useSelector((state[33m:[39m [33mRootState[39m) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 21 |[39m[0m
+  [0m [90m 22 |[39m   [36mconst[39m [newDescription[33m,[39m setNewDescription] [33m=[39m useState([32m''[39m)[0m
+  [0m [90m 23 |[39m   [36mconst[39m [newAssigneeId[33m,[39m setNewAssigneeId] [33m=[39m useState[33m<[39m[33mnumber[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m24 errors[39m[22m (6454658feca0f925)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.0c477b0042319872.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.0c477b0042319872.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.0c477b0042319872.hot-update.js[39m[22m (main) 66.6 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.0c477b0042319872.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.0c477b0042319872.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.0c477b0042319872.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts[39m[22m
+Module build failed (from ./node_modules/swc-loader/src/index.js):
+Error: 
+  [38;2;255;30;30m×[0m Expected '>', got 'name'
+   ╭─[[38;2;92;157;255;1;4m/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice.ts[0m:1:1]
+ [2m1[0m │ <file name=tickets.tsx path=client/src/app/tickets/tickets.tsx>
+   · [38;2;246;87;248m      ────[0m
+   ╰────
+
+
+Caused by:
+    0: failed to process input file
+    1: Syntax Error
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/store.ts:[32m[1m3:8[22m[39m[1m[39m[22m
+[90mTS1192: [39mModule '"/Users/lyduong/IdeaProjects/coding-assignment-react/client/src/app/slices/tickets/tickets.slice"' has no default export.
+  [0m [90m 1 |[39m [36mimport[39m { configureStore } [36mfrom[39m [32m'@reduxjs/toolkit'[39m[33m;[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m usersReducer [36mfrom[39m [32m'./users/users.slice'[39m[33m;[39m[0m
+  [0m[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m ticketsReducer [36mfrom[39m [32m'./tickets/tickets.slice'[39m[33m;[39m[0m
+  [0m [90m   |[39m        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 4 |[39m[0m
+  [0m [90m 5 |[39m [36mexport[39m [36mconst[39m store [33m=[39m configureStore({[0m
+  [0m [90m 6 |[39m   reducer[33m:[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:2[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'file'. Did you mean 'File'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:12[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:24[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'path'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:29[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'client'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:36[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'src'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:40[22m[39m[1m[39m[22m
+[90mTS2304: [39mCannot find name 'app'.
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:44[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m1:52[22m[39m[1m[39m[22m
+[90mTS2552: [39mCannot find name 'tickets'. Did you mean 'Tickets'?
+  [0m[31m[1m>[22m[39m[90m 1 |[39m [90m// client/src/app/slices/tickets/tickets.slice.ts[39m[0m
+  [0m [90m   |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 2 |[39m [36mimport[39m {createSlice[33m,[39m [33mPayloadAction[39m} [36mfrom[39m [32m'@reduxjs/toolkit'[39m[0m
+  [0m [90m 3 |[39m [36mimport[39m type {[33mTTicket[39m} [36mfrom[39m [32m'./tickets.types'[39m[0m
+  [0m [90m 4 |[39m [36mimport[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m13:8[22m[39m[1m[39m[22m
+[90mTS2307: [39mCannot find module '../slices/tickets/tickets.thunks' or its corresponding type declarations.
+  [0m [90m 11 |[39m   markIncomplete[0m
+  [0m [90m 12 |[39m } [36mfrom[39m [32m'./tickets.thunks'[39m[0m
+  [0m[31m[1m>[22m[39m[90m 13 |[39m[0m
+  [0m [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 14 |[39m type [33mTicketsState[39m [33m=[39m {[0m
+  [0m [90m 15 |[39m   tickets[33m:[39m [33mPartial[39m[33m<[39m[33mTTicket[39m[33m>[39m[][0m
+  [0m [90m 16 |[39m   selectedTicket[33m?[39m[33m:[39m [33mTTicket[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m17:53[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 15 |[39m   tickets[33m:[39m [33mPartial[39m[33m<[39m[33mTTicket[39m[33m>[39m[][0m
+  [0m [90m 16 |[39m   selectedTicket[33m?[39m[33m:[39m [33mTTicket[39m[0m
+  [0m[31m[1m>[22m[39m[90m 17 |[39m   loadingList[33m:[39m boolean[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 18 |[39m   loadingDetails[33m:[39m boolean[0m
+  [0m [90m 19 |[39m   saving[33m:[39m boolean[0m
+  [0m [90m 20 |[39m   error[33m:[39m string [33m|[39m [36mnull[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m18:57[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 16 |[39m   selectedTicket[33m?[39m[33m:[39m [33mTTicket[39m[0m
+  [0m [90m 17 |[39m   loadingList[33m:[39m boolean[0m
+  [0m[31m[1m>[22m[39m[90m 18 |[39m   loadingDetails[33m:[39m boolean[0m
+  [0m [90m    |[39m                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 19 |[39m   saving[33m:[39m boolean[0m
+  [0m [90m 20 |[39m   error[33m:[39m string [33m|[39m [36mnull[39m[0m
+  [0m [90m 21 |[39m }[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m19:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 17 |[39m   loadingList[33m:[39m boolean[0m
+  [0m [90m 18 |[39m   loadingDetails[33m:[39m boolean[0m
+  [0m[31m[1m>[22m[39m[90m 19 |[39m   saving[33m:[39m boolean[0m
+  [0m [90m    |[39m                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 20 |[39m   error[33m:[39m string [33m|[39m [36mnull[39m[0m
+  [0m [90m 21 |[39m }[0m
+  [0m [90m 22 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/slices/tickets/tickets.slice.ts:[32m[1m20:51[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 18 |[39m   loadingDetails[33m:[39m boolean[0m
+  [0m [90m 19 |[39m   saving[33m:[39m boolean[0m
+  [0m[31m[1m>[22m[39m[90m 20 |[39m   error[33m:[39m string [33m|[39m [36mnull[39m[0m
+  [0m [90m    |[39m                                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 21 |[39m }[0m
+  [0m [90m 22 |[39m[0m
+  [0m [90m 23 |[39m [36mconst[39m initialState[33m:[39m [33mTicketsState[39m [33m=[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m24 errors[39m[22m (aa9be84db0a28892)
+Entrypoint [1mmain[39m[22m = 6 assets 6 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.0c477b0042319872.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.0c477b0042319872.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.0c477b0042319872.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.0c477b0042319872.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.0c477b0042319872.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m9 errors[39m[22m (efe85eb375aa9633)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.efe85eb375aa9633.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.efe85eb375aa9633.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.efe85eb375aa9633.hot-update.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.efe85eb375aa9633.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.efe85eb375aa9633.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.efe85eb375aa9633.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m9 errors[39m[22m (8af1ae47cc08217e)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.8af1ae47cc08217e.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.8af1ae47cc08217e.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.8af1ae47cc08217e.hot-update.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.8af1ae47cc08217e.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.8af1ae47cc08217e.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.8af1ae47cc08217e.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m9 errors[39m[22m (641d5b728303c034)
+Entrypoint [1mmain[39m[22m = 7 assets 7 auxiliary assets
+Entrypoint [1mstyles[39m[22m = [1m[32mruntime.js[39m[22m [1m[32m1.641d5b728303c034.hot-update.js[39m[22m [1m[32mstyles.css[39m[22m [1m[32mstyles.js[39m[22m [1m[32m2.641d5b728303c034.hot-update.js[39m[22m 5 auxiliary assets
+chunk (runtime: runtime) [1m[32mmain.js[39m[22m, [1m[32m0.641d5b728303c034.hot-update.js[39m[22m (main) 71.2 KiB [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mruntime.js[39m[22m, [1m[32m1.641d5b728303c034.hot-update.js[39m[22m (runtime) 31.9 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mstyles.css[39m[22m, [1m[32mstyles.js[39m[22m, [1m[32m2.641d5b728303c034.hot-update.js[39m[22m (styles) 171 KiB (javascript) 80 bytes (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m
+chunk (runtime: runtime) [1m[32mvendor.css[39m[22m, [1m[32mvendor.js[39m[22m, [1m[32m3.641d5b728303c034.hot-update.js[39m[22m (vendor) (id hint: vendor) 2.7 MiB (javascript) 224 KiB (css/mini-extract) [1m[33m[initial][39m[22m [1m[32m[rendered][39m[22m [1m[33msplit chunk (cache group: vendor) (name: vendor)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m39:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 37 |[39m[0m
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m[31m[1m>[22m[39m[90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m40:45[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 38 |[39m   [90m// Select tickets and loading/error flags from Redux store[39m[0m
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m[31m[1m>[22m[39m[90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/app.tsx:[32m[1m41:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 39 |[39m   [36mconst[39m tickets [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mtickets)[0m
+  [0m [90m 40 |[39m   [36mconst[39m loading [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingList)[0m
+  [0m[31m[1m>[22m[39m[90m 41 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 42 |[39m[0m
+  [0m [90m 43 |[39m   useEffect(() [33m=>[39m {[0m
+  [0m [90m 44 |[39m     dispatch(fetchTickets())[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m65:52[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 63 |[39m[0m
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m[31m[1m>[22m[39m[90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m    |[39m                                                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m66:44[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 64 |[39m   [90m// Local state for loading and error[39m[0m
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m[31m[1m>[22m[39m[90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m [90m    |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m67:43[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 65 |[39m   [36mconst[39m loadingDetails [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39mloadingDetails)[0m
+  [0m [90m 66 |[39m   [36mconst[39m saving [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39msaving)[0m
+  [0m[31m[1m>[22m[39m[90m 67 |[39m   [36mconst[39m error [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39mtickets[33m.[39merror)[0m
+  [0m [90m    |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 68 |[39m[0m
+  [0m [90m 69 |[39m   [90m// Users for assignee dropdown[39m[0m
+  [0m [90m 70 |[39m   [36mconst[39m users [33m=[39m useAppSelector((state) [33m=>[39m state[33m.[39musers[33m.[39musers)[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m76:33[22m[39m[1m[39m[22m
+[90mTS7006: [39mParameter 't' implicitly has an 'any' type.
+  [0m [90m 74 |[39m   [90m// Selected ticket from state[39m[0m
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m[31m[1m>[22m[39m[90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+  [0m [90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./client/src/app/tickets/TicketDetails.tsx:[32m[1m77:5[22m[39m[1m[39m[22m
+[90mTS2571: [39mObject is of type 'unknown'.
+  [0m [90m 75 |[39m   [36mconst[39m ticket [33m=[39m useAppSelector((state) [33m=>[39m[0m
+  [0m [90m 76 |[39m     state[33m.[39mtickets[33m.[39mtickets[33m.[39mfind((t) [33m=>[39m t[33m.[39mid [33m===[39m [33mNumber[39m(id)) [33m||[39m[0m
+  [0m[31m[1m>[22m[39m[90m 77 |[39m     state[33m.[39mtickets[33m.[39mselectedTicket[0m
+  [0m [90m    |[39m     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[0m
+  [0m [90m 78 |[39m   )[0m
+  [0m [90m 79 |[39m[0m
+  [0m [90m 80 |[39m   [90m// Local editable fields[39m[0m
+
+webpack compiled with [1m[31m9 errors[39m[22m (1be3d80474ad69fe)
+<i> [1m[32m[webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...[39m[22m
