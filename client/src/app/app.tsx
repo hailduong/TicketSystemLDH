@@ -1,41 +1,13 @@
-/* Common */
 import React, {useEffect} from 'react'
-import {Routes, Route, Navigate} from 'react-router-dom'
-import styled from 'styled-components'
+import {Routes, Route, Navigate, Link} from 'react-router-dom'
 import {fetchTicketsThunk} from './slices/tickets/tickets.thunks'
 import Tickets from './tickets'
 import {useAppDispatch, useAppSelector} from 'client/src/app/slices/hooks'
 import {fetchUsers} from 'client/src/app/slices/users/users.thunks'
 import TicketDetails from 'client/src/app/tickets/TicketDetails'
 
-/* Props & Store */
-// No props for App component
-
-/* States */
-// None locally
-
-/* Handlers */
-// None locally
-
-/* Hooks */
-const AppContainer = styled.div`
-    padding: 1.5rem;
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-
-    h1 {
-        font-size: 2.5rem;
-        color: #b31166;
-        margin-bottom: 1rem;
-    }
-`
-
-/* Effects */
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
-
-  // Select tickets and loading/error flags from Redux store
   const tickets = useAppSelector((state) => state.tickets.tickets)
   const loading = useAppSelector((state) => state.tickets.loadingList)
   const error = useAppSelector((state) => state.tickets.error)
@@ -45,19 +17,33 @@ const App: React.FC = () => {
     dispatch(fetchUsers())
   }, [dispatch])
 
-  /* Render */
   return (
-    <AppContainer>
-      <h1>Ticketing App</h1>
-      {loading && <p>Loading tickets...</p>}
-      {error && <p style={{color: 'red'}}>{error}</p>}
-      <Routes>
-        <Route path="/" element={<Navigate to="/tickets" replace/>}/>
-        <Route path="/tickets" element={<Tickets tickets={tickets}/>}/>
-        <Route path="/tickets/:id" element={<TicketDetails/>}/>
-        <Route path="*" element={<p>Page not found</p>}/>
-      </Routes>
-    </AppContainer>
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 shadow">
+        <div className="container">
+          <Link className="navbar-brand" to="/">
+            <strong>Ticket System</strong>
+          </Link>
+        </div>
+      </nav>
+
+      <div className="container">
+        {loading && (
+          <div className="alert alert-info">Loading tickets...</div>
+        )}
+        {error && (
+          <div className="alert alert-danger">{error}</div>
+        )}
+        <Routes>
+          <Route path="/" element={<Navigate to="/tickets" replace/>}/>
+          <Route path="/tickets" element={<Tickets tickets={tickets}/>}/>
+          <Route path="/tickets/:id" element={<TicketDetails/>}/>
+          <Route path="*" element={
+            <div className="alert alert-warning">Page not found</div>
+          }/>
+        </Routes>
+      </div>
+    </>
   )
 }
 

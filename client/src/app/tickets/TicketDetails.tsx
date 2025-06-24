@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import styled from 'styled-components'
 import { useAppDispatch, useAppSelector } from '../slices/hooks'
 import {
   fetchTicketByIdThunk,
@@ -9,80 +8,27 @@ import {
   markCompleteThunk,
   markIncompleteThunk,
 } from '../slices/tickets/tickets.thunks'
-import type { TTicket } from '../slices/tickets/tickets.types'
-
-const Container = styled.div`
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #fafafa;
-  border-radius: 12px;
-  font-family: Arial, sans-serif;
-
-  h2 {
-    color: #b31166;
-    margin-bottom: 1rem;
-  }
-
-  label {
-    display: block;
-    margin: 0.5rem 0 0.25rem;
-    font-weight: 600;
-  }
-
-  select, input[type='checkbox'] {
-    margin-bottom: 1rem;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    background: #b31166;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-right: 1rem;
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-
-  .error {
-    color: red;
-    margin-bottom: 1rem;
-  }
-`
 
 const TicketDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
-  // Local state for loading and error
   const loadingDetails = useAppSelector((state) => state.tickets.loadingDetails)
   const saving = useAppSelector((state) => state.tickets.saving)
   const error = useAppSelector((state) => state.tickets.error)
-
-  // Users for assignee dropdown
   const users = useAppSelector((state) => state.users.users)
   const usersLoading = useAppSelector((state) => state.users.loading)
   const usersError = useAppSelector((state) => state.users.error)
-
-  // Selected ticket from state
   const ticket = useAppSelector((state) =>
     state.tickets.tickets.find((t) => t.id === Number(id)) ||
     state.tickets.selectedTicket
   )
 
-  // Local editable fields
   const [assigneeId, setAssigneeId] = useState<number | null>(null)
   const [completed, setCompleted] = useState(false)
   const [localError, setLocalError] = useState<string | null>(null)
 
-  // Load ticket details if not found
   useEffect(() => {
     if (!ticket && id) {
       dispatch(fetchTicketByIdThunk(Number(id)))
@@ -92,13 +38,11 @@ const TicketDetails: React.FC = () => {
     }
   }, [dispatch, id, ticket])
 
-  // Save handler with new thunks
   const handleSave = async () => {
     if (!ticket) return
     setLocalError(null)
 
     try {
-      // Assignment update
       if (assigneeId !== ticket.assigneeId && ticket.id) {
         if (assigneeId === null) {
           await dispatch(unassignTicketThunk(ticket.id)).unwrap()
@@ -107,7 +51,6 @@ const TicketDetails: React.FC = () => {
         }
       }
 
-      // Completion update
       if (completed !== ticket.completed && ticket.id) {
         if (completed) {
           await dispatch(markCompleteThunk(ticket.id)).unwrap()
@@ -122,63 +65,122 @@ const TicketDetails: React.FC = () => {
     }
   }
 
-  if (loadingDetails) return <Container>Loading ticket details...</Container>
-  if (error) return <Container className="error">Error: {error}</Container>
-  if (!ticket) return <Container>No ticket found.</Container>
+  if (loadingDetails) {
+    return (
+      <div className="container py-4 bg-light rounded-3">
+        <div className="card rounded shadow-sm cursor-pointer">
+          <div className="card-body text-center">
+            <div className="spinner-border text-primary" role="status">
+              <span className="visually-hidden">Loading ticket details...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container py-4 bg-light rounded-3">
+        <div className="alert alert-danger" role="alert">
+          Error: {error}
+        </div>
+      </div>
+    )
+  }
+
+  if (!ticket) {
+    return (
+      <div className="container py-4 bg-light rounded-3">
+        <div className="alert alert-warning" role="alert">
+          No ticket found.
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <Container>
-      <h2>Ticket #{ticket.id} Details</h2>
+    <div className="container py-4 bg-light rounded-3">
+      <div className="card rounded shadow-md cursor-pointer">
+        <div className="card-body">
+          <h2 className="card-title text-primary mb-4">Ticket #{ticket.id} Details</h2>
 
-      <div>
-        <label htmlFor="assignee">Assignee</label>
-        {usersLoading ? (
-          <p>Loading users...</p>
-        ) : usersError ? (
-          <p className="error">Error loading users: {usersError}</p>
-        ) : (
-          <select
-            id="assignee"
-            value={assigneeId ?? ''}
-            onChange={(e) =>
-              setAssigneeId(e.target.value ? Number(e.target.value) : null)
-            }
-            disabled={saving}
-          >
-            <option value="">-- No Assignee --</option>
-            {users.map((user) => (
-              <option key={user.id} value={user.id}>
-                {user.name}
-              </option>
-            ))}
-          </select>
-        )}
+          <div className="mb-3">
+            <label htmlFor="assignee" className="form-label">
+              Assignee
+            </label>
+            {usersLoading ? (
+              <p className="text-muted">Loading users...</p>
+            ) : usersError ? (
+              <div className="alert alert-danger">
+                Error loading users: {usersError}
+              </div>
+            ) : (
+              <select
+                id="assignee"
+                className="form-select"
+                value={assigneeId ?? ''}
+                onChange={(e) =>
+                  setAssigneeId(e.target.value ? Number(e.target.value) : null)
+                }
+                disabled={saving}
+              >
+                <option value="">-- No Assignee --</option>
+                {users.map((user) => (
+                  <option key={user.id} value={user.id}>
+                    {user.name}
+                  </option>
+                ))}
+              </select>
+            )}
+          </div>
+
+          <div className="mb-3 form-check">
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="completed"
+              checked={completed}
+              onChange={(e) => setCompleted(e.target.checked)}
+              disabled={saving}
+            />
+            <label className="form-check-label" htmlFor="completed">
+              Mark as Completed
+            </label>
+          </div>
+
+          {localError && (
+            <div className="alert alert-danger mb-3" role="alert">
+              {localError}
+            </div>
+          )}
+
+          <div className="d-flex gap-2">
+            <button
+              className="btn btn-primary"
+              onClick={handleSave}
+              disabled={saving}
+            >
+              {saving ? (
+                <>
+                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" />
+                  Saving...
+                </>
+              ) : (
+                'Save Changes'
+              )}
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => navigate('/tickets')}
+              disabled={saving}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <label htmlFor="completed">
-          <input
-            type="checkbox"
-            id="completed"
-            checked={completed}
-            onChange={(e) => setCompleted(e.target.checked)}
-            disabled={saving}
-          />
-          {' '}Mark as Completed
-        </label>
-      </div>
-
-      {localError && <p className="error">{localError}</p>}
-
-      <div>
-        <button onClick={handleSave} disabled={saving}>
-          {saving ? 'Saving...' : 'Save Changes'}
-        </button>
-        <button onClick={() => navigate('/tickets')} disabled={saving}>
-          Cancel
-        </button>
-      </div>
-    </Container>
+    </div>
   )
 }
 

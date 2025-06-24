@@ -1,9 +1,5 @@
-// AddTicketModal.tsx
-/* Common */
 import React from 'react'
-import styled from 'styled-components'
 
-/* Types */
 interface AddTicketModalProps {
   isOpen: boolean
   description: string
@@ -13,28 +9,6 @@ interface AddTicketModalProps {
   onDescriptionChange: (value: string) => void
   onSubmit: (e: React.FormEvent) => Promise<void>
 }
-
-/* Styles */
-const ModalOverlay = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-`
-
-const ModalForm = styled.form`
-    background: #fff;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    min-width: 320px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-`
 
 const AddTicketModal: React.FC<AddTicketModalProps> = (
   {
@@ -48,45 +22,76 @@ const AddTicketModal: React.FC<AddTicketModalProps> = (
   }) => {
   if (!isOpen) return null
 
-  /* Render */
   return (
-    <ModalOverlay>
-      <ModalForm onSubmit={onSubmit}>
-        <h3>Add New Ticket</h3>
-        <div style={{marginBottom: '0.75rem'}}>
-          <label htmlFor="description">Description</label>
-          <input
-            id="description"
-            type="text"
-            value={description}
-            onChange={(e) => onDescriptionChange(e.target.value)}
-            disabled={isSaving}
-            required
-            style={{width: '100%', padding: '0.5rem', marginTop: '0.25rem'}}
-            autoFocus
-          />
+    <>
+      <div className="modal fade show d-block" tabIndex={-1}>
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <form onSubmit={onSubmit}>
+              <div className="modal-header">
+                <h5 className="modal-title">Add New Ticket</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={onClose}
+                  disabled={isSaving}
+                  aria-label="Close"
+                />
+              </div>
+
+              <div className="modal-body">
+                <div className="mb-3">
+                  <label htmlFor="description" className="form-label">
+                    Description
+                  </label>
+                  <input
+                    id="description"
+                    type="text"
+                    className="form-control"
+                    value={description}
+                    onChange={(e) => onDescriptionChange(e.target.value)}
+                    disabled={isSaving}
+                    required
+                    autoFocus
+                  />
+                </div>
+                {saveError && (
+                  <div className="alert alert-danger" role="alert">
+                    {saveError}
+                  </div>
+                )}
+              </div>
+
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={onClose}
+                  disabled={isSaving}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  disabled={isSaving}
+                >
+                  {isSaving ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"/>
+                      Saving...
+                    </>
+                  ) : (
+                    'Add'
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        {saveError && <p style={{color: 'red'}}>{saveError}</p>}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            gap: '0.5rem'
-          }}
-        >
-          <button
-            type="button"
-            onClick={onClose}
-            disabled={isSaving}
-          >
-            Cancel
-          </button>
-          <button type="submit" disabled={isSaving}>
-            {isSaving ? 'Saving...' : 'Add'}
-          </button>
-        </div>
-      </ModalForm>
-    </ModalOverlay>
+      </div>
+      <div className="modal-backdrop fade show"/>
+    </>
   )
 }
 

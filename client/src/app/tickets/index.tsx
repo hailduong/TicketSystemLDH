@@ -1,13 +1,10 @@
-/* Common */
 import React, {useState, useMemo} from 'react'
-import styled from 'styled-components'
 import {useNavigate} from 'react-router-dom'
 import type {TTicket} from '../slices/tickets/tickets.types'
 import {createTicketThunk} from '../slices/tickets/tickets.thunks'
 import {useAppDispatch, useAppSelector} from '../slices/hooks'
 import AddTicketModal from './AddTicketModal'
 
-/* Types */
 type FilterType = 'all' | 'open' | 'completed'
 
 interface TicketsProps {
@@ -16,71 +13,6 @@ interface TicketsProps {
   error?: string
 }
 
-/* Styles */
-const TicketsContainer = styled.div`
-    padding: 1.25rem;
-    background: #fafafa;
-    border-radius: 12px;
-
-    h2 {
-        color: #b31166;
-        margin-bottom: 1rem;
-    }
-
-    .filter-row {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
-
-        button {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 6px;
-            background: #e33e6e;
-            color: #fff;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s;
-
-            &.active {
-                background: #b31166;
-            }
-
-            &:disabled {
-                opacity: 0.5;
-                cursor: not-allowed;
-            }
-        }
-    }
-
-    ul.ticket-list {
-        list-style: none;
-        padding: 0;
-
-        li {
-            margin-bottom: 0.75rem;
-            padding: 0.75rem;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(179, 17, 102, 0.03);
-            cursor: pointer;
-
-            .status {
-                font-size: 0.85rem;
-                color: #e45f3c;
-                margin-left: 1rem;
-            }
-        }
-    }
-
-    .empty {
-        color: #aaa;
-        font-style: italic;
-        margin: 2rem 0;
-    }
-`
-
-/* Hooks */
 const useTicketHandlers = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
@@ -91,29 +23,23 @@ const useTicketHandlers = () => {
 
   const handleAddTicket = async (description: string) => {
     if (!description.trim()) return
-    const payload = { description }
+    const payload = {description}
     return await dispatch(createTicketThunk(payload)).unwrap()
   }
 
   return {handleTicketClick, handleAddTicket}
 }
 
-/* Render */
 const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
-  /* Store */
   const users = useAppSelector((state) => state.users.users)
-
-  /* States */
   const [filter, setFilter] = useState<FilterType>('all')
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
   const [newDescription, setNewDescription] = useState('')
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
 
-  /* Handlers */
   const {handleTicketClick, handleAddTicket} = useTicketHandlers()
 
-  /* Memos */
   const filteredTickets = useMemo(() => {
     if (filter === 'all') return tickets
     return tickets.filter((t) => filter === 'open' ? !t.completed : t.completed)
@@ -135,60 +61,79 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     }
   }
 
-  /* Render */
   return (
-    <TicketsContainer>
-      <h2>Tickets</h2>
+    <div className="p-4 bg-light rounded-3">
+      <h1 className="text-primary mb-3">Tickets</h1>
 
-      <div className="filter-row">
-        {['all', 'open', 'completed'].map((f) => (
+      <div className="row  mb-4">
+        <div className="col-4">
           <button
-            key={f}
-            className={filter === f ? 'active' : ''}
-            onClick={() => setFilter(f as FilterType)}
+            className="btn btn-primary "
+            onClick={() => setIsAddModalOpen(true)}
             disabled={loading || isSaving}
           >
-            {f.charAt(0).toUpperCase() + f.slice(1)}
+            <i className="bi bi-plus-lg"></i> Add
           </button>
-        ))}
+        </div>
+        <div className="col-8 d-flex justify-content-end">
+          <div className="btn-group" role="group" aria-label="Ticket Filter">
+            {[
+              {key: 'all', icon: 'bi-collection', tooltip: 'All Tickets'},
+              {key: 'open', icon: 'bi-circle', tooltip: 'Open Tickets'},
+              {key: 'completed', icon: 'bi-check-circle', tooltip: 'Completed Tickets'}
+            ].map(({key, icon, tooltip}) => (
+              <button
+                key={key}
+                type="button"
+                className={`btn ${filter === key ? 'btn-primary' : 'btn-outline-primary'}`}
+                onClick={() => setFilter(key as FilterType)}
+                disabled={loading || isSaving}
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title={tooltip}
+              >
+                <i className={`bi ${icon}`}></i>
+              </button>
+            ))}
+          </div>
+        </div>
+
       </div>
 
-      <div style={{marginBottom: '1.25rem'}}>
-        <button
-          onClick={() => setIsAddModalOpen(true)}
-          disabled={loading || isSaving}
-        >
-          + Add Ticket
-        </button>
-      </div>
 
-      {loading && <div>Loading tickets...</div>}
-      {error && <div style={{color: 'red'}}>{error}</div>}
+      {loading && <div className="spinner-border text-primary" role="status"/>}
+      {error && <div className="alert alert-danger">{error}</div>}
 
       {filteredTickets.length > 0 ? (
-        <ul className="ticket-list">
+        <ul className="list-unstyled">
           {filteredTickets.map((t) => {
             const assignedUser = t.assigneeId
               ? users.find(u => u.id === t.assigneeId)
               : null
 
             return (
-              <li key={t.id} onClick={() => handleTicketClick(t.id!)}>
+              <li
+                key={t.id}
+                onClick={() => handleTicketClick(t.id!)}
+                className="mb-3 p-3 bg-white rounded shadow-sm cursor-pointer"
+              >
                 <strong>#{t.id}</strong>: {t.description}
-                <span className="status">
-                  [{t.completed ? 'Completed' : 'Open'}]
+                <span className={`ms-1 badge rounded-pill ${t.completed ? 'bg-success' : 'bg-warning'}`}>
+                  {t.completed ? 'Completed' : 'Open'}
                 </span>
-                {assignedUser && (
-                  <div>
-                    <small>Assignee: #{assignedUser.id} - {assignedUser.name}</small>
+                {assignedUser ? (
+                  <div className="small text-muted mt-1">
+                    Assignee: {assignedUser.name}
                   </div>
+                ) : (
+                  <div className="small text-info mt-1">No Assignee</div>
                 )}
               </li>
             )
           })}
         </ul>
       ) : !loading ? (
-        <div className="empty">No tickets found.</div>
+        <div className="text-muted fst-italic my-4">No tickets found.</div>
       ) : null}
 
       <AddTicketModal
@@ -200,7 +145,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
         onDescriptionChange={setNewDescription}
         onSubmit={handleAddTicketSubmit}
       />
-    </TicketsContainer>
+    </div>
   )
 }
 

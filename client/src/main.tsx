@@ -1,10 +1,11 @@
 // client/src/main.tsx
 import * as ReactDOM from 'react-dom/client'
 import {BrowserRouter} from 'react-router-dom'
-import {Provider} from 'react-redux' // <-- import Provider
-import {store} from './app/slices/store' // <-- import your store
+import {Provider} from 'react-redux'
+import {ThemeProvider} from 'styled-components' // Import ThemeProvider
+import {theme} from './styles' // Import your theme
+import {store} from './app/slices/store'
 import App from './app/app'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,8 +13,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+    </ThemeProvider>
   </Provider>
 )
