@@ -6,7 +6,7 @@ import {
   assignTicketThunk,
   unassignTicketThunk,
   markCompleteThunk,
-  markIncompleteThunk
+  markIncompleteThunk, fetchTicketsThunk
 } from '../slices/tickets/tickets.thunks'
 import styled from 'styled-components'
 
@@ -141,7 +141,6 @@ const TicketDetails: React.FC = () => {
 
     try {
       const {assigneeId, completed} = ticketState
-
       if (assigneeId !== ticket.assigneeId) {
         if (assigneeId === null) {
           await dispatch(unassignTicketThunk(ticket.id)).unwrap()
@@ -160,6 +159,8 @@ const TicketDetails: React.FC = () => {
         }
       }
 
+      // Fetch updated list before navigation
+      await dispatch(fetchTicketsThunk()).unwrap()
       navigate('/tickets')
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to save changes'
