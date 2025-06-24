@@ -81,6 +81,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     }
   }
 
+  /* Render */
   return (
     <TicketsContainer className="p-4 bg-light rounded-3">
       <h1 className="text-primary mb-3">Tickets</h1>
