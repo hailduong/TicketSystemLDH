@@ -145,3 +145,5 @@ bower_components
 psd
 thumb
 sketch
+!/.nxcache/
+!/.firebase/

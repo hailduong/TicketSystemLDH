@@ -8,6 +8,8 @@
   "scripts": {
     "start": "nx run-many --target=serve --projects=server,client",
     "test": "nx run-many --target=test --projects=server,client",
+    "build:client": "nx build client",
+    "deploy:client": "firebase deploy --only hosting",
     "heroku-start": "node dist/apps/server/main.js",
     "heroku-postbuild": "NODE_ENV=production nx build server"
   },
