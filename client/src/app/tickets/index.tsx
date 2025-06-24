@@ -5,8 +5,9 @@ import {useNavigate} from 'react-router-dom'
 import type {TTicket} from '../slices/tickets/tickets.types'
 import {createTicketThunk} from '../slices/tickets/tickets.thunks'
 import {useAppDispatch, useAppSelector} from '../slices/hooks'
+import AddTicketModal from './AddTicketModal'
 
-/* Props & Store */
+/* Types */
 type FilterType = 'all' | 'open' | 'completed'
 
 interface TicketsProps {
@@ -79,27 +80,6 @@ const TicketsContainer = styled.div`
     }
 `
 
-const ModalOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-`
-
-const ModalForm = styled.form`
-  background: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  min-width: 320px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-`
-
 /* Hooks */
 const useTicketHandlers = () => {
   const dispatch = useAppDispatch()
@@ -155,6 +135,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     }
   }
 
+  /* Render */
   return (
     <TicketsContainer>
       <h2>Tickets</h2>
@@ -210,45 +191,15 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
         <div className="empty">No tickets found.</div>
       ) : null}
 
-      {isAddModalOpen && (
-        <ModalOverlay>
-          <ModalForm onSubmit={handleAddTicketSubmit}>
-            <h3>Add New Ticket</h3>
-            <div style={{marginBottom: '0.75rem'}}>
-              <label htmlFor="description">Description</label>
-              <input
-                id="description"
-                type="text"
-                value={newDescription}
-                onChange={(e) => setNewDescription(e.target.value)}
-                disabled={isSaving}
-                required
-                style={{width: '100%', padding: '0.5rem', marginTop: '0.25rem'}}
-                autoFocus
-              />
-            </div>
-            {saveError && <p style={{color: 'red'}}>{saveError}</p>}
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'flex-end',
-                gap: '0.5rem'
-              }}
-            >
-              <button
-                type="button"
-                onClick={() => setIsAddModalOpen(false)}
-                disabled={isSaving}
-              >
-                Cancel
-              </button>
-              <button type="submit" disabled={isSaving}>
-                {isSaving ? 'Saving...' : 'Add'}
-              </button>
-            </div>
-          </ModalForm>
-        </ModalOverlay>
-      )}
+      <AddTicketModal
+        isOpen={isAddModalOpen}
+        description={newDescription}
+        isSaving={isSaving}
+        saveError={saveError}
+        onClose={() => setIsAddModalOpen(false)}
+        onDescriptionChange={setNewDescription}
+        onSubmit={handleAddTicketSubmit}
+      />
     </TicketsContainer>
   )
 }
