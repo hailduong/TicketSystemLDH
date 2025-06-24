@@ -1,118 +1,114 @@
-// @ts-nocheck
-// client/src/app/slices/tickets/tickets.thunks.ts
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import * as ticketsService from './tickets.service'
 import type {TTicket, TCreateTicketPayload} from './tickets.types'
+import {RootState} from '../store'
 
-/** Load all tickets */
-export const fetchTicketsThunk = createAsyncThunk<TTicket[]>(
+
+type TAsyncThunkConfig = {
+  state: RootState
+  rejectValue: string
+}
+
+// Base error handler for consistent error messages
+const handleError = (error: unknown, defaultMessage: string) => {
+  return (error as Error).message || defaultMessage
+}
+
+/**
+ * Thunks for ticket operations
+ */
+
+// Fetch all tickets
+export const fetchTicketsThunk = createAsyncThunk<TTicket[], void, TAsyncThunkConfig>(
   'tickets/fetchTicketsThunk',
   async (_, thunkAPI) => {
     try {
-      const tickets = await ticketsService.fetchTickets()
-      return tickets
+      return await ticketsService.fetchTickets()
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to fetch tickets'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to fetch tickets'))
     }
   }
 )
 
-/** Load ticket by id */
-export const fetchTicketByIdThunk = createAsyncThunk<TTicket, number>(
+// Fetch single ticket
+export const fetchTicketByIdThunk = createAsyncThunk<TTicket, number, TAsyncThunkConfig>(
   'tickets/fetchTicketByIdThunk',
   async (id, thunkAPI) => {
     try {
-      const ticket = await ticketsService.fetchTicketById(id)
-      return ticket
+      return await ticketsService.fetchTicketById(id)
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to fetch ticket'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to fetch ticket'))
     }
   }
 )
 
-/** Create a new ticket */
-export const createTicketThunk = createAsyncThunk<Partial<TTicket>, TCreateTicketPayload>(
+// Create ticket
+export const createTicketThunk = createAsyncThunk<TTicket, TCreateTicketPayload, TAsyncThunkConfig>(
   'tickets/createTicketThunk',
   async (payload, thunkAPI) => {
     try {
-      const payloadWithDefaults = {
+      return await ticketsService.createTicket({
         ...payload,
-        completed: false // Default value for completed
-      }
-      const ticket = await ticketsService.createTicket(payloadWithDefaults)
-      return ticket
+        completed: false
+      })
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to create ticket'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to create ticket'))
     }
   }
 )
 
-/** Assign ticket to user */
-export const assignTicketThunk = createAsyncThunk<
-  void,
-  { ticketId: number; userId: number }
->('tickets/assignTicketThunk', async ({ticketId, userId}, thunkAPI) => {
-  try {
-    await ticketsService.assignTicket(ticketId, userId)
-    // After assigning, refetch updated ticket
-    return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
-  } catch (error) {
-    return thunkAPI.rejectWithValue(
-      (error as Error).message || 'Failed to assign ticket'
-    )
+// Assign ticket
+export const assignTicketThunk = createAsyncThunk<TTicket, { ticketId: number; userId: number }, TAsyncThunkConfig>(
+  'tickets/assignTicketThunk',
+  async ({ticketId, userId}, thunkAPI) => {
+    try {
+      await ticketsService.assignTicket(ticketId, userId)
+      const updatedTicket = await ticketsService.fetchTicketById(ticketId)
+      return updatedTicket
+    } catch (error) {
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to assign ticket'))
+    }
   }
-})
+)
 
-/** Unassign ticket */
-export const unassignTicketThunk = createAsyncThunk<void, number>(
+// Unassign ticket
+export const unassignTicketThunk = createAsyncThunk<TTicket, number, TAsyncThunkConfig>(
   'tickets/unassignTicketThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.unassignTicket(ticketId)
-      // Refetch updated ticket after unassign
-      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
+      const updatedTicket = await ticketsService.fetchTicketById(ticketId)
+      return updatedTicket
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to unassign ticket'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to unassign ticket'))
     }
   }
 )
 
-/** Mark ticket as complete */
-export const markCompleteThunk = createAsyncThunk<void, number>(
+// Mark complete
+export const markCompleteThunk = createAsyncThunk<TTicket, number, TAsyncThunkConfig>(
   'tickets/markCompleteThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.markComplete(ticketId)
-      // Refetch updated ticket after marking complete
-      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
+      const updatedTicket = await ticketsService.fetchTicketById(ticketId)
+      return updatedTicket
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to mark ticket complete'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to mark ticket complete'))
     }
   }
 )
 
-/** Mark ticket as incomplete */
-export const markIncompleteThunk = createAsyncThunk<void, number>(
+// Mark incomplete
+export const markIncompleteThunk = createAsyncThunk<TTicket, number, TAsyncThunkConfig>(
   'tickets/markIncompleteThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.markIncomplete(ticketId)
-      // Refetch updated ticket after marking incomplete
-      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
+      const updatedTicket = await ticketsService.fetchTicketById(ticketId)
+      return updatedTicket
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        (error as Error).message || 'Failed to mark ticket incomplete'
-      )
+      return thunkAPI.rejectWithValue(handleError(error, 'Failed to mark ticket incomplete'))
     }
   }
 )

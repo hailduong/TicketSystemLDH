@@ -25,7 +25,7 @@ export type TTicketsResponse = TTicket[];
  */
 export type TCreateTicketPayload = {
   description: string;
-  assigneeId?: number | null;
+  completed?: boolean;
 };
 
 /**
