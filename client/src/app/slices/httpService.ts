@@ -5,11 +5,15 @@ export const API_ENDPOINTS = {
   TICKETS: '/tickets',
 } as const
 
+const isProduction = true;
 
+const baseURL = isProduction
+  ? 'https://ticket-system-ldh-a96486055de3.herokuapp.com/api'
+  : '/api';
 
 const httpService = axios.create({
-  baseURL: '/api', // base URL for all API calls
-  timeout: 5000,   // optional timeout, 5 seconds
+  baseURL,
+  timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
   },

@@ -1,0 +1,28 @@
+assets by info 1.74 MiB [immutable]
+  assets by status 1.73 MiB [big]
+    asset main.b4d1646216c265b7.js 1.43 MiB [emitted] [immutable] [big] (name: main)
+    asset styles.57eb93720134f638.css 307 KiB [emitted] [immutable] [minimized] [big] (name: styles)
+  asset runtime.c60c9e38098d3b80.js 6.81 KiB [emitted] [immutable] (name: runtime)
+  asset styles.7c7eff93a96f3765.js 444 bytes [emitted] [immutable] (name: styles)
+assets by chunk 307 KiB (auxiliary name: styles)
+  asset bootstrap-icons.1295669cd4e305c97f2c.woff 176 KiB [emitted] (auxiliary name: styles)
+  asset bootstrap-icons.92ea18a81d737146ff04.woff2 131 KiB [emitted] (auxiliary name: styles)
+asset 3rdpartylicenses.txt 85.6 KiB [emitted]
+asset favicon.ico 14.7 KiB [emitted] [from: client/src/favicon.ico] [copied]
+asset assets/.gitkeep 0 bytes [emitted] [from: client/src/assets/.gitkeep] [copied]
+Entrypoint main [big] 1.44 MiB = runtime.c60c9e38098d3b80.js 6.81 KiB main.b4d1646216c265b7.js 1.43 MiB
+Entrypoint styles [big] 314 KiB (307 KiB) = runtime.c60c9e38098d3b80.js 6.81 KiB styles.57eb93720134f638.css 307 KiB styles.7c7eff93a96f3765.js 444 bytes 2 auxiliary assets
+orphan modules 710 KiB (javascript) 937 bytes (runtime) [orphan] 73 modules
+runtime modules 3.48 KiB 8 modules
+modules by path ./node_modules/ 1.07 MiB 194 modules
+modules by path ./client/src/ 372 KiB (javascript) 325 KiB (css/mini-extract)
+  ./client/src/main.tsx + 62 modules 372 KiB [built] [code generated]
+  ./client/src/styles.css 50 bytes [built] [code generated]
+  css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[8].use[1]!./node_modules/@nrwl/webpack/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].oneOf[8].use[2]!./client/src/styles.css 325 KiB [built] [code generated]
+fs (ignored) 15 bytes [built] [code generated]
+util (ignored) 15 bytes [built] [code generated]
+util (ignored) 15 bytes [built] [code generated]
+util (ignored) 15 bytes [built] [code generated]
+util (ignored) 15 bytes [built] [code generated]
+./util.inspect (ignored) 15 bytes [built] [code generated]
+webpack 5.75.0 compiled successfully in 3092 ms

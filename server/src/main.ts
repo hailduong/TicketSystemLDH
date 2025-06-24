@@ -12,6 +12,17 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
+
+  // Add CORS configuration
+  app.enableCors({
+    origin: [
+      'https://ticket-system-ldh.web.app',
+      'http://localhost:4200'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    credentials: true
+  });
+
   const port = process.env.PORT || 3333;
   await app.listen(port);
   Logger.log(`🚀 Application is running on: http://localhost:${port}/${globalPrefix}`);
