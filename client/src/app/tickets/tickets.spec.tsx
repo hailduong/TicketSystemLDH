@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Tickets from './tickets';
+import Tickets from './index';
 
 describe('Tickets', () => {
   it('should render successfully', () => {

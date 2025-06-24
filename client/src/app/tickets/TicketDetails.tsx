@@ -3,11 +3,11 @@ import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAppDispatch, useAppSelector } from '../slices/hooks'
 import {
-  fetchTicketById,
-  assignTicket,
-  unassignTicket,
-  markComplete,
-  markIncomplete,
+  fetchTicketByIdThunk,
+  assignTicketThunk,
+  unassignTicketThunk,
+  markCompleteThunk,
+  markIncompleteThunk,
 } from '../slices/tickets/tickets.thunks'
 import type { TTicket } from '../slices/tickets/tickets.types'
 
@@ -85,7 +85,7 @@ const TicketDetails: React.FC = () => {
   // Load ticket details if not found
   useEffect(() => {
     if (!ticket && id) {
-      dispatch(fetchTicketById(Number(id)))
+      dispatch(fetchTicketByIdThunk(Number(id)))
     } else if (ticket) {
       setAssigneeId(ticket.assigneeId ?? null)
       setCompleted(ticket.completed ?? false)
@@ -101,18 +101,18 @@ const TicketDetails: React.FC = () => {
       // Assignment update
       if (assigneeId !== ticket.assigneeId && ticket.id) {
         if (assigneeId === null) {
-          await dispatch(unassignTicket(ticket.id)).unwrap()
+          await dispatch(unassignTicketThunk(ticket.id)).unwrap()
         } else {
-          await dispatch(assignTicket({ ticketId: ticket.id, userId: assigneeId })).unwrap()
+          await dispatch(assignTicketThunk({ ticketId: ticket.id, userId: assigneeId })).unwrap()
         }
       }
 
       // Completion update
       if (completed !== ticket.completed && ticket.id) {
         if (completed) {
-          await dispatch(markComplete(ticket.id)).unwrap()
+          await dispatch(markCompleteThunk(ticket.id)).unwrap()
         } else {
-          await dispatch(markIncomplete(ticket.id)).unwrap()
+          await dispatch(markIncompleteThunk(ticket.id)).unwrap()
         }
       }
 

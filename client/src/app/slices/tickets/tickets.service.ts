@@ -29,7 +29,9 @@ export const fetchTicketById = async (id: number): Promise<TTicket> => {
 export const createTicket = async (
   payload: TCreateTicketPayload
 ): Promise<TTicket> => {
+  debugger;
   const response = await axiosInstance.post<TTicket>(TICKETS_URL, payload)
+  debugger
   return response.data
 }
 

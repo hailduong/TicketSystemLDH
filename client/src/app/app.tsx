@@ -1,9 +1,9 @@
 /* Common */
 import React, {useEffect} from 'react'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 import styled from 'styled-components'
-import {fetchTickets} from './slices/tickets/tickets.thunks'
-import Tickets from './tickets/tickets'
+import {fetchTicketsThunk} from './slices/tickets/tickets.thunks'
+import Tickets from './tickets'
 import {useAppDispatch, useAppSelector} from 'client/src/app/slices/hooks'
 import {fetchUsers} from 'client/src/app/slices/users/users.thunks'
 import TicketDetails from 'client/src/app/tickets/TicketDetails'
@@ -41,7 +41,7 @@ const App: React.FC = () => {
   const error = useAppSelector((state) => state.tickets.error)
 
   useEffect(() => {
-    dispatch(fetchTickets())
+    dispatch(fetchTicketsThunk())
     dispatch(fetchUsers())
   }, [dispatch])
 
@@ -52,8 +52,9 @@ const App: React.FC = () => {
       {loading && <p>Loading tickets...</p>}
       {error && <p style={{color: 'red'}}>{error}</p>}
       <Routes>
+        <Route path="/" element={<Navigate to="/tickets" replace/>}/>
         <Route path="/tickets" element={<Tickets tickets={tickets}/>}/>
-        <Route path="/tickets/:id" element={<TicketDetails />} />
+        <Route path="/tickets/:id" element={<TicketDetails/>}/>
         <Route path="*" element={<p>Page not found</p>}/>
       </Routes>
     </AppContainer>

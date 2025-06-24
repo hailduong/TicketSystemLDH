@@ -4,7 +4,7 @@ import React, {useState, useMemo} from 'react'
 import styled from 'styled-components'
 import {useNavigate} from 'react-router-dom' // import useNavigate
 import type {TTicket} from '../slices/tickets/tickets.types'
-import {createTicket} from '../slices/tickets/tickets.thunks'
+import {createTicketThunk} from '../slices/tickets/tickets.thunks'
 import {useAppDispatch, useAppSelector} from '../slices/hooks'
 
 /* Props & Store */
@@ -95,7 +95,6 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
   // Add Ticket modal state
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
   const [newDescription, setNewDescription] = useState('')
-  const [newAssigneeId, setNewAssigneeId] = useState<number | null>(null) // new assignee state
   const [isSaving, setIsSaving] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
 
@@ -120,15 +119,11 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
     setSaveError(null)
 
     try {
-      // Include assigneeId in the payload if selected
-      const payload: any = {description: newDescription}
-      if (newAssigneeId !== null) {
-        payload.assigneeId = newAssigneeId
+      const payload = {
+        description: newDescription
       }
-
-      await dispatch(createTicket(payload)).unwrap()
+      await dispatch(createTicketThunk(payload)).unwrap()
       setNewDescription('')
-      setNewAssigneeId(null) // reset assignee selection
       setIsAddModalOpen(false)
     } catch (err: any) {
       setSaveError(err.message || 'Failed to add ticket')
@@ -241,34 +236,6 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
                 autoFocus
               />
             </div>
-
-            {/* Assignee dropdown */}
-            <div style={{marginBottom: '0.75rem'}}>
-              <label htmlFor="assignee">Assignee</label>
-              {usersLoading ? (
-                <p>Loading users...</p>
-              ) : usersError ? (
-                <p style={{color: 'red'}}>{usersError}</p>
-              ) : (
-                <select
-                  id="assignee"
-                  value={newAssigneeId ?? ''}
-                  onChange={(e) =>
-                    setNewAssigneeId(e.target.value ? Number(e.target.value) : null)
-                  }
-                  disabled={isSaving}
-                  style={{width: '100%', padding: '0.5rem', marginTop: '0.25rem'}}
-                >
-                  <option value="">-- Select Assignee (optional) --</option>
-                  {users.map((user) => (
-                    <option key={user.id} value={user.id}>
-                      {user.name}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-
             {saveError && <p style={{color: 'red'}}>{saveError}</p>}
             <div
               style={{

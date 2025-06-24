@@ -2,13 +2,13 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 import type {TTicket} from './tickets.types'
 import {
-  fetchTickets,
-  fetchTicketById,
-  createTicket,
-  assignTicket,
-  unassignTicket,
-  markComplete,
-  markIncomplete
+  fetchTicketsThunk,
+  fetchTicketByIdThunk,
+  createTicketThunk,
+  assignTicketThunk,
+  unassignTicketThunk,
+  markCompleteThunk,
+  markIncompleteThunk
 } from './tickets.thunks'
 
 type TicketsState = {
@@ -37,25 +37,25 @@ const ticketsSlice = createSlice({
   },
   extraReducers: (builder) => {
     // Fetch tickets list
-    builder.addCase(fetchTickets.pending, (state) => {
+    builder.addCase(fetchTicketsThunk.pending, (state) => {
       state.loadingList = true
       state.error = null
     })
-    builder.addCase(fetchTickets.fulfilled, (state, action: PayloadAction<TTicket[]>) => {
+    builder.addCase(fetchTicketsThunk.fulfilled, (state, action: PayloadAction<TTicket[]>) => {
       state.loadingList = false
       state.tickets = action.payload
     })
-    builder.addCase(fetchTickets.rejected, (state, action) => {
+    builder.addCase(fetchTicketsThunk.rejected, (state, action) => {
       state.loadingList = false
       state.error = (action.payload as string) || action.error.message || 'Failed to load tickets'
     })
 
     // Fetch ticket details
-    builder.addCase(fetchTicketById.pending, (state) => {
+    builder.addCase(fetchTicketByIdThunk.pending, (state) => {
       state.loadingDetails = true
       state.error = null
     })
-    builder.addCase(fetchTicketById.fulfilled, (state, action: PayloadAction<TTicket>) => {
+    builder.addCase(fetchTicketByIdThunk.fulfilled, (state, action: PayloadAction<TTicket>) => {
       state.loadingDetails = false
       state.selectedTicket = action.payload
       // Also update or add ticket in tickets list for consistency
@@ -66,74 +66,74 @@ const ticketsSlice = createSlice({
         state.tickets.push(action.payload)
       }
     })
-    builder.addCase(fetchTicketById.rejected, (state, action) => {
+    builder.addCase(fetchTicketByIdThunk.rejected, (state, action) => {
       state.loadingDetails = false
       state.error = (action.payload as string) || action.error.message || 'Failed to load ticket details'
     })
 
     // Create ticket
-    builder.addCase(createTicket.pending, (state) => {
+    builder.addCase(createTicketThunk.pending, (state) => {
       state.saving = true
       state.error = null
     })
-    builder.addCase(createTicket.fulfilled, (state, action: PayloadAction<Partial<TTicket>>) => {
+    builder.addCase(createTicketThunk.fulfilled, (state, action: PayloadAction<Partial<TTicket>>) => {
       state.saving = false
       state.tickets.push(action.payload)
     })
-    builder.addCase(createTicket.rejected, (state, action) => {
+    builder.addCase(createTicketThunk.rejected, (state, action) => {
       state.saving = false
       state.error = (action.payload as string) || action.error.message || 'Failed to create ticket'
     })
 
     // Assign ticket
-    builder.addCase(assignTicket.pending, (state) => {
+    builder.addCase(assignTicketThunk.pending, (state) => {
       state.saving = true
       state.error = null
     })
-    builder.addCase(assignTicket.fulfilled, (state, action) => {
+    builder.addCase(assignTicketThunk.fulfilled, (state, action) => {
       state.saving = false
-      // No direct payload, ticket updated via fetchTicketById thunk
+      // No direct payload, ticket updated via fetchTicketByIdThunk thunk
     })
-    builder.addCase(assignTicket.rejected, (state, action) => {
+    builder.addCase(assignTicketThunk.rejected, (state, action) => {
       state.saving = false
       state.error = (action.payload as string) || action.error.message || 'Failed to assign ticket'
     })
 
     // Unassign ticket
-    builder.addCase(unassignTicket.pending, (state) => {
+    builder.addCase(unassignTicketThunk.pending, (state) => {
       state.saving = true
       state.error = null
     })
-    builder.addCase(unassignTicket.fulfilled, (state, action) => {
+    builder.addCase(unassignTicketThunk.fulfilled, (state, action) => {
       state.saving = false
     })
-    builder.addCase(unassignTicket.rejected, (state, action) => {
+    builder.addCase(unassignTicketThunk.rejected, (state, action) => {
       state.saving = false
       state.error = (action.payload as string) || action.error.message || 'Failed to unassign ticket'
     })
 
     // Mark complete
-    builder.addCase(markComplete.pending, (state) => {
+    builder.addCase(markCompleteThunk.pending, (state) => {
       state.saving = true
       state.error = null
     })
-    builder.addCase(markComplete.fulfilled, (state, action) => {
+    builder.addCase(markCompleteThunk.fulfilled, (state, action) => {
       state.saving = false
     })
-    builder.addCase(markComplete.rejected, (state, action) => {
+    builder.addCase(markCompleteThunk.rejected, (state, action) => {
       state.saving = false
       state.error = (action.payload as string) || action.error.message || 'Failed to mark ticket complete'
     })
 
     // Mark incomplete
-    builder.addCase(markIncomplete.pending, (state) => {
+    builder.addCase(markIncompleteThunk.pending, (state) => {
       state.saving = true
       state.error = null
     })
-    builder.addCase(markIncomplete.fulfilled, (state, action) => {
+    builder.addCase(markIncompleteThunk.fulfilled, (state, action) => {
       state.saving = false
     })
-    builder.addCase(markIncomplete.rejected, (state, action) => {
+    builder.addCase(markIncompleteThunk.rejected, (state, action) => {
       state.saving = false
       state.error = (action.payload as string) || action.error.message || 'Failed to mark ticket incomplete'
     })

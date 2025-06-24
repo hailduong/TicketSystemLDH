@@ -5,8 +5,8 @@ import * as ticketsService from './tickets.service'
 import type {TTicket, TCreateTicketPayload} from './tickets.types'
 
 /** Load all tickets */
-export const fetchTickets = createAsyncThunk<TTicket[]>(
-  'tickets/fetchTickets',
+export const fetchTicketsThunk = createAsyncThunk<TTicket[]>(
+  'tickets/fetchTicketsThunk',
   async (_, thunkAPI) => {
     try {
       const tickets = await ticketsService.fetchTickets()
@@ -20,8 +20,8 @@ export const fetchTickets = createAsyncThunk<TTicket[]>(
 )
 
 /** Load ticket by id */
-export const fetchTicketById = createAsyncThunk<TTicket, number>(
-  'tickets/fetchTicketById',
+export const fetchTicketByIdThunk = createAsyncThunk<TTicket, number>(
+  'tickets/fetchTicketByIdThunk',
   async (id, thunkAPI) => {
     try {
       const ticket = await ticketsService.fetchTicketById(id)
@@ -35,14 +35,13 @@ export const fetchTicketById = createAsyncThunk<TTicket, number>(
 )
 
 /** Create a new ticket */
-export const createTicket = createAsyncThunk<Partial<TTicket>, TCreateTicketPayload>(
-  'tickets/createTicket',
+export const createTicketThunk = createAsyncThunk<Partial<TTicket>, TCreateTicketPayload>(
+  'tickets/createTicketThunk',
   async (payload, thunkAPI) => {
     try {
       const payloadWithDefaults = {
         ...payload,
-        completed: false, // Default value for completed
-        assigneeId: payload.assigneeId ?? null
+        completed: false // Default value for completed
       }
       const ticket = await ticketsService.createTicket(payloadWithDefaults)
       return ticket
@@ -55,14 +54,14 @@ export const createTicket = createAsyncThunk<Partial<TTicket>, TCreateTicketPayl
 )
 
 /** Assign ticket to user */
-export const assignTicket = createAsyncThunk<
+export const assignTicketThunk = createAsyncThunk<
   void,
   { ticketId: number; userId: number }
->('tickets/assignTicket', async ({ticketId, userId}, thunkAPI) => {
+>('tickets/assignTicketThunk', async ({ticketId, userId}, thunkAPI) => {
   try {
     await ticketsService.assignTicket(ticketId, userId)
     // After assigning, refetch updated ticket
-    return thunkAPI.dispatch(fetchTicketById(ticketId))
+    return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
   } catch (error) {
     return thunkAPI.rejectWithValue(
       (error as Error).message || 'Failed to assign ticket'
@@ -71,13 +70,13 @@ export const assignTicket = createAsyncThunk<
 })
 
 /** Unassign ticket */
-export const unassignTicket = createAsyncThunk<void, number>(
-  'tickets/unassignTicket',
+export const unassignTicketThunk = createAsyncThunk<void, number>(
+  'tickets/unassignTicketThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.unassignTicket(ticketId)
       // Refetch updated ticket after unassign
-      return thunkAPI.dispatch(fetchTicketById(ticketId))
+      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
     } catch (error) {
       return thunkAPI.rejectWithValue(
         (error as Error).message || 'Failed to unassign ticket'
@@ -87,13 +86,13 @@ export const unassignTicket = createAsyncThunk<void, number>(
 )
 
 /** Mark ticket as complete */
-export const markComplete = createAsyncThunk<void, number>(
-  'tickets/markComplete',
+export const markCompleteThunk = createAsyncThunk<void, number>(
+  'tickets/markCompleteThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.markComplete(ticketId)
       // Refetch updated ticket after marking complete
-      return thunkAPI.dispatch(fetchTicketById(ticketId))
+      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
     } catch (error) {
       return thunkAPI.rejectWithValue(
         (error as Error).message || 'Failed to mark ticket complete'
@@ -103,13 +102,13 @@ export const markComplete = createAsyncThunk<void, number>(
 )
 
 /** Mark ticket as incomplete */
-export const markIncomplete = createAsyncThunk<void, number>(
-  'tickets/markIncomplete',
+export const markIncompleteThunk = createAsyncThunk<void, number>(
+  'tickets/markIncompleteThunk',
   async (ticketId, thunkAPI) => {
     try {
       await ticketsService.markIncomplete(ticketId)
       // Refetch updated ticket after marking incomplete
-      return thunkAPI.dispatch(fetchTicketById(ticketId))
+      return thunkAPI.dispatch(fetchTicketByIdThunk(ticketId))
     } catch (error) {
       return thunkAPI.rejectWithValue(
         (error as Error).message || 'Failed to mark ticket incomplete'
