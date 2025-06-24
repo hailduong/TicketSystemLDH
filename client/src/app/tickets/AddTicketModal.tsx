@@ -82,7 +82,7 @@ const AddTicketModal: React.FC<AddTicketModalProps> = (
                       Saving...
                     </>
                   ) : (
-                    'Add'
+                    'Add Ticket'
                   )}
                 </button>
               </div>
