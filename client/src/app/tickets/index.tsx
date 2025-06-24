@@ -178,19 +178,26 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
       {/* Ticket List */}
       {filteredTickets.length > 0 ? (
         <ul className="ticket-list">
-          {filteredTickets.map((t) => (
-            <li key={t.id} onClick={() => handleTicketClick(t.id!)}>
-              <strong>#{t.id}</strong>: {t.description}
-              <span className="status">
+          {filteredTickets.map((t) => {
+            // Find assigned user if there's an assigneeId
+            const assignedUser = t.assigneeId
+              ? users.find(u => u.id === t.assigneeId)
+              : null
+
+            return (
+              <li key={t.id} onClick={() => handleTicketClick(t.id!)}>
+                <strong>#{t.id}</strong>: {t.description}
+                <span className="status">
                 [{t.completed ? 'Completed' : 'Open'}]
-              </span>
-              {t.assigneeId !== null && (
-                <div>
-                  <small>Assignee ID: {t.assigneeId}</small>
-                </div>
-              )}
-            </li>
-          ))}
+                </span>
+                {assignedUser && (
+                  <div>
+                    <small>Assignee: #{assignedUser.id} - {assignedUser.name}</small>
+                  </div>
+                )}
+              </li>
+            )
+          })}
         </ul>
       ) : !loading ? (
         <div className="empty">No tickets found.</div>
