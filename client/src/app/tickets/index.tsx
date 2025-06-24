@@ -4,7 +4,25 @@ import type {TTicket} from '../slices/tickets/tickets.types'
 import {createTicketThunk} from '../slices/tickets/tickets.thunks'
 import {useAppDispatch, useAppSelector} from '../slices/hooks'
 import AddTicketModal from './AddTicketModal'
+import styled from 'styled-components'
 
+/* Styles */
+const TicketsContainer = styled.div`
+    padding: 1rem;
+    border-radius: 0.3rem;
+    
+    .list-unstyled li {
+        transition: box-shadow 0.2s ease;
+        cursor: pointer;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+`
+
+/* Types & Interfaces */
 type FilterType = 'all' | 'open' | 'completed'
 
 interface TicketsProps {
@@ -13,6 +31,7 @@ interface TicketsProps {
   error?: string
 }
 
+/* Hooks */
 const useTicketHandlers = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
@@ -30,6 +49,7 @@ const useTicketHandlers = () => {
   return {handleTicketClick, handleAddTicket}
 }
 
+/* Components */
 const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
   const users = useAppSelector((state) => state.users.users)
   const [filter, setFilter] = useState<FilterType>('all')
@@ -62,7 +82,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
   }
 
   return (
-    <div className="p-4 bg-light rounded-3">
+    <TicketsContainer className="p-4 bg-light rounded-3">
       <h1 className="text-primary mb-3">Tickets</h1>
 
       <div className="row  mb-4">
@@ -115,7 +135,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
               <li
                 key={t.id}
                 onClick={() => handleTicketClick(t.id!)}
-                className="mb-3 p-3 bg-white rounded shadow-sm cursor-pointer"
+                className="mb-3 p-3 bg-white rounded cursor-pointer"
               >
                 <strong>#{t.id}</strong>: {t.description}
                 <span className={`ms-1 badge rounded-pill ${t.completed ? 'bg-success' : 'bg-warning'}`}>
@@ -145,7 +165,7 @@ const Tickets: React.FC<TicketsProps> = ({tickets, loading, error}) => {
         onDescriptionChange={setNewDescription}
         onSubmit={handleAddTicketSubmit}
       />
-    </div>
+    </TicketsContainer>
   )
 }
 

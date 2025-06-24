@@ -1,6 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+
+
 :root, [data-bs-theme=light] {
     /* Override Bootstrap CSS variables with your theme colors */
     --bs-primary: #00bcd4;
@@ -21,6 +23,10 @@
     /* Update derived variables */
     --bs-link-color: var(--bs-primary);
     --bs-link-hover-color: #0096a7;
+
+    /* Fonts */
+    --bs-font-sans-serif: "Raleway", sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
 
     /* Add this specific override for primary buttons */
     .btn-primary {

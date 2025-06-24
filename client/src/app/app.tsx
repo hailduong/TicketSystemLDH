@@ -22,7 +22,7 @@ const App: React.FC = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 shadow">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <strong>Ticket System</strong>
+            <strong><i className="bi bi-ticket-detailed"></i> Ticket</strong> System
           </Link>
         </div>
       </nav>

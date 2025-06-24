@@ -101,9 +101,9 @@ const TicketDetails: React.FC = () => {
 
   return (
     <div className="container py-4 bg-light rounded-3">
-      <div className="card rounded shadow-md cursor-pointer">
+      <div className="card rounded shadow-sm cursor-pointer">
         <div className="card-body">
-          <h2 className="card-title text-primary mb-4">Ticket #{ticket.id} Details</h2>
+          <h2 className="card-title text-primary mb-4">Ticket #{ticket.id}</h2>
           <div className="mb-3">
             <em>{ticket.description}</em>
           </div>
