@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../slices/hooks'
+import React, {useEffect, useState} from 'react'
+import {useParams, useNavigate} from 'react-router-dom'
+import {useAppDispatch, useAppSelector} from '../slices/hooks'
 import {
   fetchTicketByIdThunk,
   assignTicketThunk,
   unassignTicketThunk,
   markCompleteThunk,
-  markIncompleteThunk,
+  markIncompleteThunk
 } from '../slices/tickets/tickets.thunks'
 
 const TicketDetails: React.FC = () => {
-  const { id } = useParams<{ id: string }>()
+  const {id} = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
@@ -47,7 +47,7 @@ const TicketDetails: React.FC = () => {
         if (assigneeId === null) {
           await dispatch(unassignTicketThunk(ticket.id)).unwrap()
         } else {
-          await dispatch(assignTicketThunk({ ticketId: ticket.id, userId: assigneeId })).unwrap()
+          await dispatch(assignTicketThunk({ticketId: ticket.id, userId: assigneeId})).unwrap()
         }
       }
 
@@ -104,10 +104,12 @@ const TicketDetails: React.FC = () => {
       <div className="card rounded shadow-md cursor-pointer">
         <div className="card-body">
           <h2 className="card-title text-primary mb-4">Ticket #{ticket.id} Details</h2>
-
+          <div className="mb-3">
+            <em>{ticket.description}</em>
+          </div>
           <div className="mb-3">
             <label htmlFor="assignee" className="form-label">
-              Assignee
+              <strong>Assignee:</strong>
             </label>
             {usersLoading ? (
               <p className="text-muted">Loading users...</p>
@@ -155,7 +157,7 @@ const TicketDetails: React.FC = () => {
             </div>
           )}
 
-          <div className="d-flex gap-2">
+          <div className="d-flex gap-2 mt-4">
             <button
               className="btn btn-primary"
               onClick={handleSave}
@@ -163,11 +165,11 @@ const TicketDetails: React.FC = () => {
             >
               {saving ? (
                 <>
-                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true" />
+                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"/>
                   Saving...
                 </>
               ) : (
-                'Save Changes'
+                'Update'
               )}
             </button>
             <button

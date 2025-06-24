@@ -1,4 +1,4 @@
-import axiosInstance from '../axiosInstance'
+import httpService from '../httpService'
 import type {
   TTicketsResponse,
   TTicket,
@@ -11,7 +11,7 @@ const TICKETS_URL = '/tickets'
  * Fetches all tickets from the backend.
  */
 export const fetchTickets = async (): Promise<TTicketsResponse> => {
-  const response = await axiosInstance.get<TTicketsResponse>(TICKETS_URL)
+  const response = await httpService.get<TTicketsResponse>(TICKETS_URL)
   return response.data
 }
 
@@ -19,7 +19,7 @@ export const fetchTickets = async (): Promise<TTicketsResponse> => {
  * Fetch a single ticket by ID.
  */
 export const fetchTicketById = async (id: number): Promise<TTicket> => {
-  const response = await axiosInstance.get<TTicket>(`${TICKETS_URL}/${id}`)
+  const response = await httpService.get<TTicket>(`${TICKETS_URL}/${id}`)
   return response.data
 }
 
@@ -30,7 +30,7 @@ export const createTicket = async (
   payload: TCreateTicketPayload
 ): Promise<TTicket> => {
   debugger;
-  const response = await axiosInstance.post<TTicket>(TICKETS_URL, payload)
+  const response = await httpService.post<TTicket>(TICKETS_URL, payload)
   debugger
   return response.data
 }
@@ -42,26 +42,26 @@ export const assignTicket = async (
   ticketId: number,
   userId: number
 ): Promise<void> => {
-  await axiosInstance.put(`${TICKETS_URL}/${ticketId}/assign/${userId}`)
+  await httpService.put(`${TICKETS_URL}/${ticketId}/assign/${userId}`)
 }
 
 /**
  * Unassigns a ticket.
  */
 export const unassignTicket = async (ticketId: number): Promise<void> => {
-  await axiosInstance.put(`${TICKETS_URL}/${ticketId}/unassign`)
+  await httpService.put(`${TICKETS_URL}/${ticketId}/unassign`)
 }
 
 /**
  * Marks a ticket as complete.
  */
 export const markComplete = async (ticketId: number): Promise<void> => {
-  await axiosInstance.put(`${TICKETS_URL}/${ticketId}/complete`)
+  await httpService.put(`${TICKETS_URL}/${ticketId}/complete`)
 }
 
 /**
  * Marks a ticket as incomplete.
  */
 export const markIncomplete = async (ticketId: number): Promise<void> => {
-  await axiosInstance.delete(`${TICKETS_URL}/${ticketId}/complete`)
+  await httpService.delete(`${TICKETS_URL}/${ticketId}/complete`)
 }
