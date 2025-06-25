@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import AddTicketModal, {IAddTicketModalProps} from './AddTicketModal'
+import AddTicketModal, {IAddTicketModalProps} from './index'
 
 const defaultProps: IAddTicketModalProps = {
   isOpen: true,

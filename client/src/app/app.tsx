@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 import {Routes, Route, Navigate, Link} from 'react-router-dom'
 import {fetchTicketsThunk} from './slices/tickets/tickets.thunks'
-import Tickets from './tickets'
+import Tickets from './components/Tickets'
 import {useAppDispatch, useAppSelector} from 'client/src/app/slices/hooks'
 import {fetchUsers} from 'client/src/app/slices/users/users.thunks'
-import TicketDetails from 'client/src/app/tickets/TicketDetails'
+import TicketDetails from './components/Tickets/TicketDetails'
 import styled from 'styled-components'
 
 

@@ -1,102 +1,25 @@
 import React, {useEffect, useState, useCallback} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import {useAppDispatch, useAppSelector} from '../slices/hooks'
+import {useAppDispatch, useAppSelector} from '../../../slices/hooks'
 import {
   fetchTicketByIdThunk,
   assignTicketThunk,
   unassignTicketThunk,
   markCompleteThunk,
-  markIncompleteThunk, fetchTicketsThunk
-} from '../slices/tickets/tickets.thunks'
-import styled from 'styled-components'
+  markIncompleteThunk,
+  fetchTicketsThunk
+} from '../../../slices/tickets/tickets.thunks'
+import {TicketDetailsContainer} from './TicketDetails.styled'
+import {LoadingView} from './LoadingView'
+import {ErrorView} from './ErrorView'
+import {EmptyView} from './EmptyView'
 
 /* Interfaces & Types */
-interface ITicket {
-  id: number;
-  description: string;
-  assigneeId: number | null;
-  completed: boolean;
-}
-
-interface IUser {
-  id: number;
-  name: string;
-}
-
 type TTicketState = {
   assigneeId: number | null;
   completed: boolean;
 };
 
-
-/* Styled Components */
-const TicketDetailsContainer = styled.div`
-  .ticket-card {
-    transition: all 0.2s ease;
-
-    .card-title {
-      font-weight: 600;
-      color: var(--bs-primary);
-    }
-
-    .description {
-      font-style: italic;
-      color: #6c757d;
-    }
-
-    .assignee-section {
-      margin-bottom: 1rem;
-    }
-
-    .status-section {
-      margin-bottom: 1rem;
-    }
-
-    .actions {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-  }
-
-  .loading-spinner {
-    color: var(--bs-primary);
-  }
-
-
-  .alert {
-    margin-bottom: 1rem;
-  }
-`
-
-/* Components */
-const LoadingView: React.FC = () => (
-  <div className="container py-4 bg-light rounded-3" data-testid="loading-view">
-    <div className="card rounded shadow-sm">
-      <div className="card-body text-center">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Loading ticket details...</span>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-
-const ErrorView: React.FC<{ error: string }> = ({error}) => (
-  <div className="container py-4 bg-light rounded-3" data-testid="error-view">
-    <div className="alert alert-danger" role="alert">
-      Error: {error}
-    </div>
-  </div>
-)
-
-const EmptyView: React.FC = () => (
-  <div className="container py-4 bg-light rounded-3" data-testid="empty-view">
-    <div className="alert alert-warning" role="alert">
-      No ticket found.
-    </div>
-  </div>
-)
 
 /** Ticket Details Component */
 const TicketDetails: React.FC = () => {
