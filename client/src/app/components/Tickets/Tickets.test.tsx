@@ -24,7 +24,12 @@ function renderWithStore(ui: React.ReactElement, preloadedState = {}) {
   const store = configureStore({
     reducer: {users: usersReducer},
     preloadedState: {
-      users: {users: sampleUsers},
+      users: {
+        users: sampleUsers,
+        loading: false,
+        error: null,
+        currentRequestId: null
+      },
       ...preloadedState
     }
   })
