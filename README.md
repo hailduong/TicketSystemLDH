@@ -1,6 +1,8 @@
 # Ticket Management App
 
+This Ticket Management App is a lightweight tool designed to showcase key front-end and back-end integration skills, focusing on core CRUD operations, asynchronous state management, and UX considerations under artificial network delays. It demonstrates state handling with Redux Toolkit and user-friendly features like filtering and assignment workflows.
 
+---
 
 ## I. Live Demo
 
@@ -13,9 +15,21 @@
 
 ---
 
+## II. Setup & Running Locally
 
+1. Clone the repo and install dependencies:  
+   `yarn install`
 
-## II. System Requirements (SRS)
+2. Start the development server (frontend + backend via Nx monorepo):  
+   `yarn start`
+
+3. Access the app at `http://localhost:3333`
+
+> Note: Ensure `.env` is configured for API URLs and keys. 
+
+---
+
+## III. System Requirements (SRS)
 
 **Objective:** 
 Build a minimal ticket management app, focusing on add, filter, assign, and complete workflows, and deliberate handling of an artificial API delay.
@@ -43,7 +57,13 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 
 
-## III. Software Design & Architecture
+## IV. Software Design & Architecture
+
+- [Frontend Source Code](./client/src)  
+	- [React Components](./client/src/app/components) 
+	- [Redux Slices & Thunks](./client/src/app/slices) 
+	
+- [Backend Source Code](./server/src)  
 
 ### High-Level Architecture
 
@@ -64,7 +84,7 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 - **Loading flags** (`loadingList`, `loadingDetails`, `saving`) to disable UI during requests.  
 - **Stale-request handling:**  “always latest wins” behavior by adding a request-ID guard in the slices
 
-### **Notes**:
+### **Notes**
 
 - .env are included for demo purpose.
 
@@ -72,12 +92,12 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 
 
-## IV. Test Cases
+## V. Test Cases
 
 - ✅ = Implemented
 - ⏳ = Not Implemented (Pending)
 
-## 1. Tickets List Screen
+### 1. Tickets List Screen
 
 | **Test ID** | **Priority** | **Test Scenario**                          | **Test Steps / Actions**                              | **Expected Outcome**                                         | **Status** |
 | ----------- | ------------ | ------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ | ---------- |
@@ -87,7 +107,7 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 | TC-004      | Medium       | Add button opens AddTicketModal            | Click the "Add" button                                | Add Ticket modal opens                                       | ✅          |
 | TC-005      | Low          | Disabled Add button when loading or saving | Set `loading` or `isSaving` state, check "Add" button | Button is disabled                                           | ⏳          |
 
-## 2. Add Ticket Modal
+### 2. Add Ticket Modal
 
 | **Test ID** | **Priority** | **Test Scenario**                             | **Test Steps / Actions**                         | **Expected Outcome**                                       | **Status** |
 | ----------- | ------------ | --------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------- | ---------- |
@@ -102,7 +122,7 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 
 
-## 3. Ticket Details Screen
+### 3. Ticket Details Screen
 
 | **Test ID** | **Priority** | **Test Scenario**                     | **Test Steps / Actions**                                 | **Expected Outcome**                                         | **Status** |
 | ----------- | ------------ | ------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
@@ -118,12 +138,12 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 ![test-2](./docs/test-2.png)
 
-## V. Improvement Proposal
+## VI. Future Work
 
-If given more time to enhance this app, I would focus on:
+If given more time to enhance this app, I would focus on these technical improvements:
 
 - **Progressive Web App (PWA) support:**  
-  Enable installation and offline capabilities for a native app-like experience.
+  Enable installation and offline capabilities for a native app-like experience. 
 
 - **State Persistence:**  
   Integrate `redux-persist` to cache Redux state in local storage, improving load times and offline usability.
