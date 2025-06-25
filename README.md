@@ -1,54 +1,129 @@
-# Coding assignment
+# Ticket Management App
 
-The goal of this assignment is to showcase your ability to develop features and your coding style. Due to the time
-constraint you will have to prioritize what you work on, and have to try and balance cleanliness with just getting it
-done.
 
-Even though the app is small, one can easily spend the whole week working on it: perfecting styles, testing every single
-method, or carefully crafting every single line of code. Please don't! Do as much as you can in about two hours and
-share the results.
 
-The most important part of the interview will come after this one, when we look at the app together, talk about the
-decisions you have made, etc..
+## I. Live Demo
 
-## Ticket Managing Application (React)
+- **Frontend:** https://ticket-system-ldh.web.app/  
+  (Deployed via Firebase Hosting)  
+- **Backend:** https://ticket-system-ldh-a96486055de3.herokuapp.com/api
+  (Deployed on Heroku)
 
-Fork the project, clone your fork locally, then install the packages and you're good to go!
+<img src="./docs/UI.png" alt="UI" style="zoom:50%;" />
 
-```bash
-yarn
+---
 
-# run client and server apps
-yarn start
 
-# run tests
-yarn test
-```
 
-### Requirements
+## II. System Requirements (SRS)
 
-Build a ticket managing app, where the user can _add_, _filter_ (by status), _assign_, and _complete_ tickets.
+**Objective:** 
+Build a minimal ticket management app, focusing on add, filter, assign, and complete workflows, and deliberate handling of an artificial API delay.
 
-- The app should have two screens:
+### Core Features
 
-  1. the list screen and
-  2. the details screen.
+- **Add tickets:** Create new tickets with description.  
+- **Filter tickets:** By status (open, completed).  
+- **Assign tickets:** Assign to a user.  
+- **Complete tickets:** Mark as completed or revert.  
 
-- You can use any state management library you want (or none at all). e.g. redux, xstate, etc.
+### Screens
 
-- You can use any styling library or methodology you want (or none at all). e.g. styled-components, tailwind, mui, etc.
+- **List Screen** (`/tickets`)  
+- **Details Screen** (`/tickets/:id`)  
 
-- Write a couple of tests. The goal here is not to build a production-quality app, so don't test every single detail. Two or three tests should be good enough.
+### **Tech Stack**
 
-### Server / API
+- **Frontend:** React + React Router v6 + Redux Toolkit + Styled Components + Bootstrap 5
+- **Backend:** NestJS + TypeScript + Artificial API delay on Heroku
+- **Monorepo:** Nx workspace managing both FE + BE
+- **Testing:** Jest + React Testing Library
 
-The server application is available at http://localhost:4200/api when you run `yarn start`.
+---
 
-Note that there is an intentional artificial delay on the API - PLEASE DO NOT REMOVE IT! We've added it in as a way to check your frontend application's ability to handle race conditions/loading and pending states.
 
-Please see the [API docs here](./server/README.md).
 
-## Submitting your solution
+## III. Software Design & Architecture
 
-Please send us the link to your repo on GitHub, Gitlab, etc. We will continue to work on it during the pair-programming
-sessions. Please also indicate approximately how long you spent on the submission.
+### High-Level Architecture
+
+- **Frontend:**  
+  - React renders the UI components  
+  - Redux & Redux Toolkit manage application state  
+  - Services handle API communication  
+  - Async thunks manage side effects and async flows (e.g., fetching, saving)  
+  - For this app, data is simple enough, so no explicit mapper was implemented for serialization/deserialization
+- **Client Routing:** Two main routes using React Router v6:  
+  - `/tickets` (list screen)  
+  - `/tickets/:id` (details screen)  
+- **API Layer:**  
+  - REST endpoints for tickets and users, deployed on NestJS backend (Heroku)  
+
+### Race Condition Mitigation
+
+- **Loading flags** (`loadingList`, `loadingDetails`, `saving`) to disable UI during requests.  
+- **Stale-request handling:**  “always latest wins” behavior by adding a request-ID guard in the slices
+
+### **Notes**:
+
+- .env are included for demo purpose.
+
+---
+
+
+
+## IV. Test Cases
+
+- ✅ = Implemented
+- ⏳ = Not Implemented (Pending)
+
+## 1. Tickets List Screen
+
+| **Test ID** | **Priority** | **Test Scenario**                          | **Test Steps / Actions**                              | **Expected Outcome**                                         | **Status** |
+| ----------- | ------------ | ------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| TC-001      | High         | Render all tickets with details            | Render `<Tickets>` with sample tickets                | Ticket descriptions, assignee names, and statuses appear correctly | ✅          |
+| TC-002      | High         | Filter tickets by each filter type         | Click on filter buttons ("All", "Open", "Completed")  | Tickets list updates correctly per selected filter           | ⏳          |
+| TC-003      | Medium       | Display error message on tickets list      | Render `<Tickets>` with error prop set                | Error message text is displayed                              | ✅          |
+| TC-004      | Medium       | Add button opens AddTicketModal            | Click the "Add" button                                | Add Ticket modal opens                                       | ✅          |
+| TC-005      | Low          | Disabled Add button when loading or saving | Set `loading` or `isSaving` state, check "Add" button | Button is disabled                                           | ⏳          |
+
+## 2. Add Ticket Modal
+
+| **Test ID** | **Priority** | **Test Scenario**                             | **Test Steps / Actions**                         | **Expected Outcome**                                       | **Status** |
+| ----------- | ------------ | --------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------- | ---------- |
+| TC-006      | High         | Render Add Ticket modal when `isOpen` is true | Render `<AddTicketModal>` with `isOpen=true`     | Modal dialog with title “Add New Ticket” is shown          | ✅          |
+| TC-007      | High         | Submit button disabled if empty description   | Render modal with empty description              | Submit button disabled                                     | ✅          |
+| TC-008      | Medium       | Do not render Add Ticket modal when closed    | Render `<AddTicketModal>` with `isOpen=false`    | Modal is not present in the DOM                            | ✅          |
+| TC-009      | Medium       | Close Add Ticket modal on close button click  | Click the modal’s close button                   | `onClose` handler is called                                | ✅          |
+| TC-010      | Medium       | Cancel button triggers onClose                | Click "Cancel" button                            | onClose handler called                                     | ✅          |
+| TC-011      | Medium       | Limits description input length               | Enter text longer than 100 characters            | Input truncated at 100 chars                               | ⏳          |
+| TC-012      | Low          | Escape key closes modal if not saving         | Press Escape key while modal open and not saving | Modal closes                                               | ⏳          |
+| TC-013      | Low          | Submitting AddTicketModal triggers submit     | Fill description, submit form                    | Dispatch createTicketThunk called, modal closes on success | ⏳          |
+
+
+
+## 3. Ticket Details Screen
+
+| **Test ID** | **Priority** | **Test Scenario**                     | **Test Steps / Actions**                                 | **Expected Outcome**                                         | **Status** |
+| ----------- | ------------ | ------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| TC-014      | High         | Load ticket data and show form fields | Navigate to ticket details page with valid ticket ID     | Form shows ticket description, assignee dropdown, completed checkbox | ⏳          |
+| TC-015      | Medium       | Show loading, error, empty states     | Simulate loading, API error, and no ticket found states  | Loading spinner, error alert, or empty view rendered accordingly | ⏳          |
+| TC-016      | High         | Save updates dispatch correct thunks  | Change assignee and/or completion status, click "Update" | Correct assign/unassign and complete/incomplete thunks are dispatched | ⏳          |
+
+
+
+### Tests Screenshots
+
+![test-1](./docs/test-1.png)
+
+![test-2](./docs/test-2.png)
+
+## V. Improvement Proposal
+
+If given more time to enhance this app, I would focus on:
+
+- **Progressive Web App (PWA) support:**  
+  Enable installation and offline capabilities for a native app-like experience.
+
+- **State Persistence:**  
+  Integrate `redux-persist` to cache Redux state in local storage, improving load times and offline usability.
