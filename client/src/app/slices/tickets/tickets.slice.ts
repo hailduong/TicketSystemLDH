@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction, ActionReducerMapBuilder } from '@reduxjs/toolkit'
-import type { RootState } from '../store'
-import type { TTicket } from './tickets.types'
+import {createSlice, ActionReducerMapBuilder} from '@reduxjs/toolkit'
+import type {RootState} from '../store'
+import type {TTicket} from './tickets.types'
 import {
   fetchTicketsThunk,
   fetchTicketByIdThunk,
@@ -19,6 +19,8 @@ interface ITicketsState {
   loadingDetails: boolean
   saving: boolean
   error: string | null
+  currentListRequestId: string | null
+  currentDetailsRequestId: string | null
 }
 
 /* Initial State */
@@ -28,7 +30,9 @@ const initialState: ITicketsState = {
   loadingList: false,
   loadingDetails: false,
   saving: false,
-  error: null
+  error: null,
+  currentListRequestId: null,
+  currentDetailsRequestId: null
 }
 
 /* Slice */
@@ -46,34 +50,46 @@ const ticketsSlice = createSlice({
   extraReducers: (builder: ActionReducerMapBuilder<ITicketsState>) => {
     builder
       // Fetch tickets list
-      .addCase(fetchTicketsThunk.pending, (state) => {
+      .addCase(fetchTicketsThunk.pending, (state, action) => {
         state.loadingList = true
         state.error = null
+        state.currentListRequestId = action.meta.requestId
       })
-      .addCase(fetchTicketsThunk.fulfilled, (state, { payload }) => {
+      .addCase(fetchTicketsThunk.fulfilled, (state, action) => {
+        // only accept if this is the latest list request
+        if (action.meta.requestId !== state.currentListRequestId) return
         state.loadingList = false
-        state.tickets = payload
+        state.tickets = action.payload
+        state.currentListRequestId = null
       })
       .addCase(fetchTicketsThunk.rejected, (state, action) => {
+        if (action.meta.requestId !== state.currentListRequestId) return
         state.loadingList = false
         state.error = action.error.message || 'Failed to load tickets'
+        state.currentListRequestId = null
       })
 
       // Fetch ticket details
-      .addCase(fetchTicketByIdThunk.pending, (state) => {
+      .addCase(fetchTicketByIdThunk.pending, (state, action) => {
         state.loadingDetails = true
         state.error = null
+        state.currentDetailsRequestId = action.meta.requestId
       })
-      .addCase(fetchTicketByIdThunk.fulfilled, (state, { payload }) => {
+      .addCase(fetchTicketByIdThunk.fulfilled, (state, action) => {
+        if (action.meta.requestId !== state.currentDetailsRequestId) return
         state.loadingDetails = false
-        state.selectedTicket = payload
+        state.selectedTicket = action.payload
+        // also update list entry if present
         state.tickets = state.tickets.map(ticket =>
-          ticket.id === payload.id ? payload : ticket
+          ticket.id === action.payload.id ? action.payload : ticket
         )
+        state.currentDetailsRequestId = null
       })
       .addCase(fetchTicketByIdThunk.rejected, (state, action) => {
+        if (action.meta.requestId !== state.currentDetailsRequestId) return
         state.loadingDetails = false
         state.error = action.error.message || 'Failed to load ticket details'
+        state.currentDetailsRequestId = null
       })
 
       // Create ticket
@@ -81,8 +97,8 @@ const ticketsSlice = createSlice({
         state.saving = true
         state.error = null
       })
-      .addCase(createTicketThunk.fulfilled, (state, { payload }) => {
-        if (payload.id) { // Type guard for partial ticket
+      .addCase(createTicketThunk.fulfilled, (state, {payload}) => {
+        if (payload.id) {
           state.saving = false
           state.tickets = [...state.tickets, payload as TTicket]
           state.selectedTicket = payload as TTicket
@@ -93,7 +109,7 @@ const ticketsSlice = createSlice({
         state.error = action.error.message || 'Failed to create ticket'
       })
 
-      // Handle status changing actions
+      // Handle status-changing actions (assign/unassign/complete/incomplete)
       .addMatcher(
         (action): action is ReturnType<typeof assignTicketThunk.pending> =>
           [
@@ -136,7 +152,7 @@ const ticketsSlice = createSlice({
 })
 
 /* Actions */
-export const { clearError, clearSelectedTicket } = ticketsSlice.actions
+export const {clearError, clearSelectedTicket} = ticketsSlice.actions
 
 /* Selectors */
 export const selectTickets = (state: RootState) => state.tickets.tickets

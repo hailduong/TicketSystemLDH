@@ -1,4 +1,4 @@
-import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
+import {createSlice, ActionReducerMapBuilder} from '@reduxjs/toolkit'
 import type {TUser} from './users.types'
 import {fetchUsers} from './users.thunks'
 
@@ -6,21 +6,19 @@ interface IUsersState {
   users: TUser[];
   loading: boolean;
   error: string | null;
+  currentRequestId: string | null
 }
 
 const SLICE_NAME = 'users'
-
-/**
- * Initial state for the users slice
- */
 const initialState: IUsersState = {
   users: [],
   loading: false,
-  error: null
+  error: null,
+  currentRequestId: null
 }
 
 /**
- * Users slice containing reducers and state management logic
+ * Users slice
  */
 const usersSlice = createSlice({
   name: SLICE_NAME,
@@ -28,36 +26,30 @@ const usersSlice = createSlice({
   reducers: {
     clearUsers: (state) => {
       state.users = []
-      state.error = null
     },
     resetError: (state) => {
       state.error = null
     }
   },
-  extraReducers: (builder) => {
+  extraReducers: (builder: ActionReducerMapBuilder<IUsersState>) => {
     builder
-      // Handle loading state
-      .addCase(fetchUsers.pending, (state) => {
+      .addCase(fetchUsers.pending, (state, action) => {
         state.loading = true
         state.error = null
+        state.currentRequestId = action.meta.requestId
       })
-      // Handle successful fetch
-      .addCase(
-        fetchUsers.fulfilled,
-        (state, {payload}: PayloadAction<TUser[]>) => {
-          state.loading = false
-          state.users = payload
-          state.error = null
-        }
-      )
-      // Handle error state
-      .addCase(fetchUsers.rejected, (state, action) => {
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        if (action.meta.requestId !== state.currentRequestId) return
         state.loading = false
-        state.error =
-          (action.payload as string) ||
-          action.error.message ||
-          'Failed to load users'
+        state.users = action.payload
+        state.currentRequestId = null
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
+        if (action.meta.requestId !== state.currentRequestId) return
+        state.loading = false
+        state.error = (action.payload as string) ?? action.error.message ?? 'Failed to load users'
         state.users = []
+        state.currentRequestId = null
       })
   }
 })
