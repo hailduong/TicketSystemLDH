@@ -11,7 +11,7 @@ This Ticket Management App is a lightweight tool designed to showcase key front-
 - **Backend:** https://ticket-system-ldh-a96486055de3.herokuapp.com/api
   (Deployed on Heroku)
 
-<img src="./docs/UI.png" alt="UI" style="zoom:50%;" />
+<img src="./docs/UI.png" alt="UI" style="width: 323px" />
 
 ---
 
