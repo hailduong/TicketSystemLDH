@@ -10,6 +10,8 @@
     "test": "nx run-many --target=test --projects=server,client",
     "build:client": "NODE_ENV=production nx build client",
     "deploy:client": "firebase deploy --only hosting",
+    "prestart:server:dev": "cp client/.env.development client/.env",
+    "prestart:client:prod": "cp client/.env.production client/.env",
     "build:server": "nx build server",
     "serve:server": "node dist/server/main.js",
     "heroku-start": "node dist/server/main.js",
