@@ -1,5 +1,5 @@
 import React from 'react'
-import {AddTicketModalContainer} from './addTicketModal.styled'
+import {AddTicketModalContainer} from './AddTicketModal.styled'
 
 export interface IAddTicketModalProps {
   isOpen: boolean

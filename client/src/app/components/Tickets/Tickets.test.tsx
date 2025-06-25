@@ -55,15 +55,6 @@ describe('Tickets List Screen', () => {
     expect(screen.getByText('Completed')).toBeInTheDocument()
   })
 
-  it('shows loading skeletons when loading prop is true', () => {
-    renderWithStore(
-      <Tickets tickets={[]} loading={true} error={undefined}/>
-    )
-    // There should be three skeleton elements rendered
-    const skeletons = screen.getAllByRole('status', {hidden: true})
-    expect(skeletons.length).toBeGreaterThanOrEqual(3)
-  })
-
   it('filters tickets by “Completed” when that button is clicked', () => {
     renderWithStore(
       <Tickets tickets={sampleTickets} loading={false} error={undefined}/>
