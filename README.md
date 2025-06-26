@@ -85,6 +85,9 @@ graph TD
   TicketsService["tickets.service.ts"]
   UsersService["users.service.ts"]
 
+  %% Backend API
+  BackendAPI["Back End API"]
+
   %% Routing flow
   App -->|Route /tickets| Tickets
   App -->|Route /tickets/:id| TicketDetails
@@ -103,6 +106,10 @@ graph TD
   UsersSlice <--> UsersThunks
   TicketsThunks --> TicketsService
   UsersThunks --> UsersService
+
+  %% Services call Backend API
+  TicketsService --> BackendAPI
+  UsersService --> BackendAPI
 
   %% Components dispatch thunks & select from slices
   Tickets -- dispatch/load tickets, users --> TicketsThunks
