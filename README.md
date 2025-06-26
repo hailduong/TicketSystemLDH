@@ -55,8 +55,6 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 ---
 
-
-
 ## IV. Software Design & Architecture
 
 - [Frontend Source Code](./client/src)  
@@ -67,12 +65,101 @@ Build a minimal ticket management app, focusing on add, filter, assign, and comp
 
 ### High-Level Architecture
 
+```mermaid
+graph TD
+  %% Components and routing
+  App["App.tsx"]
+  Tickets["Tickets.tsx"]
+  TicketDetails["TicketDetails.tsx"]
+  TicketItem["TicketItem.tsx"]
+  AddTicketModal["AddTicketModal.tsx"]
+
+  %% Redux slices & thunks
+  Store["Redux Store"]
+  TicketsSlice["tickets slice"]
+  UsersSlice["users slice"]
+  TicketsThunks["tickets thunks"]
+  UsersThunks["users thunks"]
+
+  %% Services
+  TicketsService["tickets.service.ts"]
+  UsersService["users.service.ts"]
+
+  %% Routing flow
+  App -->|Route /tickets| Tickets
+  App -->|Route /tickets/:id| TicketDetails
+
+  %% Tickets component connections
+  Tickets --> TicketItem
+  Tickets --> AddTicketModal
+
+  %% Redux Store connections
+  App --> Store
+  Store --> TicketsSlice
+  Store --> UsersSlice
+
+  %% Thunks connect slices to services
+  TicketsSlice <--> TicketsThunks
+  UsersSlice <--> UsersThunks
+  TicketsThunks --> TicketsService
+  UsersThunks --> UsersService
+
+  %% Components dispatch thunks & select from slices
+  Tickets -- dispatch/load tickets, users --> TicketsThunks
+  Tickets -- select tickets, users from slice --> TicketsSlice
+  TicketDetails -- dispatch/update ticket --> TicketsThunks
+  TicketDetails -- select ticket, users from slice --> TicketsSlice
+  TicketDetails -- select users from slice --> UsersSlice
+```
+
 - **Frontend:**  
   - React renders the UI components  
   - Redux & Redux Toolkit manage application state  
   - Services handle API communication  
   - Async thunks manage side effects and async flows (e.g., fetching, saving)  
   - For this app, data is simple enough, so no explicit mapper was implemented for serialization/deserialization
+
+```mermaid
+flowchart TD
+  Start((Start / App Load))
+  LoadData[Load tickets & users data]
+  ShowList[/Show Ticket List Screen/]
+  FilterTickets[Filter tickets by status]
+  ClickTicket[Click on a ticket]
+  ShowDetails[/Show Ticket Details Screen/]
+  EditDetails[Edit assignee or completion status]
+  SaveChanges[Save changes - dispatch update thunk]
+  SuccessSave[Update successful]
+  AddTicket[Click Add Ticket button]
+  OpenModal[/Open Add Ticket Modal/]
+  InputDesc[Enter ticket description]
+  SubmitAdd[Submit new ticket - dispatch create thunk]
+  SuccessAdd[Add successful]
+  Error[Error Handling - show error]
+  BackToList[Back to Ticket List]
+
+  %% Flow
+  Start --> LoadData --> ShowList
+  ShowList --> FilterTickets
+  FilterTickets --> ShowList
+  ShowList --> ClickTicket
+  ClickTicket --> ShowDetails
+  ShowDetails --> EditDetails
+  EditDetails --> SaveChanges
+  SaveChanges -->|Success| SuccessSave
+  SaveChanges -->|Error| Error
+  SuccessSave --> BackToList
+  Error --> ShowDetails
+
+  ShowList --> AddTicket
+  AddTicket --> OpenModal
+  OpenModal --> InputDesc
+  InputDesc --> SubmitAdd
+  SubmitAdd -->|Success| SuccessAdd
+  SubmitAdd -->|Error| Error
+  SuccessAdd --> BackToList
+```
+
 - **Client Routing:** Two main routes using React Router v6:  
   - `/tickets` (list screen)  
   - `/tickets/:id` (details screen)  
