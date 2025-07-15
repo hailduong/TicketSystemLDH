@@ -8,8 +8,7 @@ This Ticket Management App is a lightweight tool designed to showcase key front-
 
 - **Frontend:** https://ticket-system-ldh.web.app/  
   (Deployed via Firebase Hosting)  
-- **Backend:** https://ticket-system-ldh-a96486055de3.herokuapp.com/api
-  (Deployed on Heroku)
+- **Backend:** Deployed on Heroku
 
 <img src="./docs/UI.png" alt="UI" style="width: 323px" />
 
@@ -234,7 +233,7 @@ flowchart TD
 
 ## VI. Future Work
 
-If given more time to enhance this app, I would focus on these technical improvements:
+To enhance this app, I would focus on these technical improvements:
 
 - **Progressive Web App (PWA) support:**  
   Enable installation and offline capabilities for a native app-like experience. 
